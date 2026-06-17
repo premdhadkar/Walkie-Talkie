@@ -1,0 +1,7 @@
+#Wed Jun 17 23:35:25 IST 2026
+base.0=C\:\\Users\\premd\\.gemini\\antigravity-ide\\scratch\\WiFiDirectWalkieTalkie\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+base.1=C\:\\Users\\premd\\.gemini\\antigravity-ide\\scratch\\WiFiDirectWalkieTalkie\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
+path.0=classes.dex
+path.1=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

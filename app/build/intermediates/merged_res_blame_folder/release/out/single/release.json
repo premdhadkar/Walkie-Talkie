@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.example.wifidirectwalkietalkie.app-merged_res-4:/xml_backup_rules.xml.flat",
+        "source": "com.example.wifidirectwalkietalkie.app-main-5:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.wifidirectwalkietalkie.app-merged_res-4:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.wifidirectwalkietalkie.app-main-5:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.wifidirectwalkietalkie.app-merged_res-4:/raw_roger_sound.mp3.flat",
+        "source": "com.example.wifidirectwalkietalkie.app-main-5:/raw/roger_sound.mp3"
+    }
+]

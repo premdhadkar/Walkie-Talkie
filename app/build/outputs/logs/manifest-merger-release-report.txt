@@ -1,0 +1,349 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:2:1-50:12
+MERGED from [androidx.compose.material3:material3:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\d3291a8bfa4ee8f134f711b292a9c541\transformed\material3-1.1.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.8.2] C:\Users\premd\.gradle\caches\transforms-3\a799c584a3f324cbfb05fce53c22553a\transformed\activity-1.8.2\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\premd\.gradle\caches\transforms-3\7413511d308b24a1317aa972c6ebb28c\transformed\activity-compose-1.8.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-core-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\e13b05a456bf2df4c9d55ffcb3b8e7cc\transformed\animation-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\23fec765191c76352e1c515f0617a4a2\transformed\material-icons-core-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.material:material-ripple-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\a69e1211c78d6e9c193e9c6955c4ad8b\transformed\material-ripple-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.animation:animation-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\1655f266560fec73117a07f3399b69dd\transformed\animation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\b81991ff1fb986fea7e4280e5ac55d7b\transformed\foundation-layout-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.foundation:foundation-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\61680e43bd6fab957cd5442f0008ca59\transformed\foundation-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\767a1aefa0197e45fafb542f554b55ee\transformed\ui-unit-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\20508138ddb9df56257662eb6e6f845c\transformed\ui-geometry-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-util-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\ddb6bd2b13ed4407c21cb180a9054fd8\transformed\ui-util-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-text-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\a07d0c112ade71380693608269e0a31d\transformed\ui-text-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\81e47b9a26e5007af881ad935d69021d\transformed\ui-tooling-preview-release\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\7c8703334e4497b84bc6eb894ceedd62\transformed\ui-graphics-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.ui:ui-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\a5afa25fe7ec0267c02085c8a4f6747e\transformed\ui-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\premd\.gradle\caches\transforms-3\d2456d9bf2d7007bd9afad4cbc736c02\transformed\activity-ktx-1.8.2\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\dcc16a86e36bdeb6da6065a0c0357d72\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\44c22a29cdd479df7121d1c898359b3f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\998b55b9fb7e2bacc2dff3d5c2a7b48a\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\4ee0d9a75d2bcda185a53e0afed5aabd\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\1a7969319ba623955dc25c21bbc859b1\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\premd\.gradle\caches\transforms-3\9d65de3bb6e96cce00bdcb6020eb6d8a\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\premd\.gradle\caches\transforms-3\c48b1701facc5757a9dc45f8317b7358\transformed\savedstate-1.2.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\fcb2a8bd718f67841681e94a9ac8bb54\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\5b239b90d780c16afdc1c7c7635ec8e1\transformed\core-ktx-1.12.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\41dc081a59d94d2f7b9c7de534e0bccc\transformed\autofill-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\c990a3be892b408a4d08833fbe9ed53b\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\c2d714ce60f7348d2751f555453e4a60\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\5033df34c436c28e0062418bdfa34235\transformed\runtime-saveable-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.compose.runtime:runtime-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\cc84db7e9efb8a050e63816f2d5bcb89\transformed\runtime-release\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\1eaadbaf2a7c5dddda17526adf3040e3\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\c31ee264d4734c8f93ea34d44f24ae1f\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\3406562d63d63a81fb039d7df847c11d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\premd\.gradle\caches\transforms-3\911712ca186cc966f4cd56d73c827562\transformed\core-runtime-2.2.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\8a7b5cf0418d3934702138360fa489e4\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\49c67af455c782e9dc71c32884a85b94\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+	package
+		INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:2:11-69
+uses-feature#android.hardware.wifi.direct
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:5:5-89
+	android:required
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:5:63-86
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:5:19-62
+uses-feature#android.hardware.microphone
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:6:5-88
+	android:required
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:6:62-85
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:6:19-61
+uses-permission#android.permission.NEARBY_WIFI_DEVICES
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:9:5-11:32
+	android:usesPermissionFlags
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:10:9-55
+	tools:targetApi
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:11:9-29
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:9:22-75
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:13:5-76
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:13:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:14:5-76
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:14:22-73
+uses-permission#android.permission.INTERNET
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:15:5-67
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:15:22-64
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:16:5-71
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:16:22-68
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:17:5-77
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:17:22-74
+uses-permission#android.permission.FOREGROUND_SERVICE_MICROPHONE
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:18:5-88
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:18:22-85
+uses-permission#android.permission.WAKE_LOCK
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:19:5-68
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:19:22-65
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:20:5-77
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:20:22-74
+application
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:24:5-48:19
+INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:24:5-48:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\44c22a29cdd479df7121d1c898359b3f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\44c22a29cdd479df7121d1c898359b3f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\3406562d63d63a81fb039d7df847c11d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\3406562d63d63a81fb039d7df847c11d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\8a7b5cf0418d3934702138360fa489e4\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\8a7b5cf0418d3934702138360fa489e4\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:31:9-35
+	android:label
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:29:9-41
+	android:fullBackupContent
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:27:9-54
+	android:roundIcon
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:30:9-63
+	tools:targetApi
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:33:9-29
+	android:icon
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:28:9-58
+	android:allowBackup
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:25:9-35
+	android:theme
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:32:9-60
+	android:dataExtractionRules
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:26:9-65
+activity#com.example.wifidirectwalkietalkie.MainActivity
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:34:9-42:20
+	android:exported
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:36:13-36
+	android:theme
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:37:13-64
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:35:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:38:13-41:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:39:17-69
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:39:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:40:17-77
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:40:27-74
+service#com.example.wifidirectwalkietalkie.WalkieTalkieService
+ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:44:9-47:40
+	android:exported
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:47:13-37
+	android:foregroundServiceType
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:46:13-55
+	android:name
+		ADDED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml:45:13-48
+uses-sdk
+INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml
+MERGED from [androidx.compose.material3:material3:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\d3291a8bfa4ee8f134f711b292a9c541\transformed\material3-1.1.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material3:material3:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\d3291a8bfa4ee8f134f711b292a9c541\transformed\material3-1.1.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.2] C:\Users\premd\.gradle\caches\transforms-3\a799c584a3f324cbfb05fce53c22553a\transformed\activity-1.8.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.2] C:\Users\premd\.gradle\caches\transforms-3\a799c584a3f324cbfb05fce53c22553a\transformed\activity-1.8.2\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\premd\.gradle\caches\transforms-3\7413511d308b24a1317aa972c6ebb28c\transformed\activity-compose-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-compose:1.8.2] C:\Users\premd\.gradle\caches\transforms-3\7413511d308b24a1317aa972c6ebb28c\transformed\activity-compose-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\e13b05a456bf2df4c9d55ffcb3b8e7cc\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-core-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\e13b05a456bf2df4c9d55ffcb3b8e7cc\transformed\animation-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\23fec765191c76352e1c515f0617a4a2\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-icons-core-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\23fec765191c76352e1c515f0617a4a2\transformed\material-icons-core-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\a69e1211c78d6e9c193e9c6955c4ad8b\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.material:material-ripple-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\a69e1211c78d6e9c193e9c6955c4ad8b\transformed\material-ripple-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\1655f266560fec73117a07f3399b69dd\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.animation:animation-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\1655f266560fec73117a07f3399b69dd\transformed\animation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\b81991ff1fb986fea7e4280e5ac55d7b\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-layout-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\b81991ff1fb986fea7e4280e5ac55d7b\transformed\foundation-layout-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\61680e43bd6fab957cd5442f0008ca59\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.foundation:foundation-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\61680e43bd6fab957cd5442f0008ca59\transformed\foundation-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\767a1aefa0197e45fafb542f554b55ee\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-unit-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\767a1aefa0197e45fafb542f554b55ee\transformed\ui-unit-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\20508138ddb9df56257662eb6e6f845c\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-geometry-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\20508138ddb9df56257662eb6e6f845c\transformed\ui-geometry-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\ddb6bd2b13ed4407c21cb180a9054fd8\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-util-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\ddb6bd2b13ed4407c21cb180a9054fd8\transformed\ui-util-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\a07d0c112ade71380693608269e0a31d\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-text-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\a07d0c112ade71380693608269e0a31d\transformed\ui-text-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\81e47b9a26e5007af881ad935d69021d\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\81e47b9a26e5007af881ad935d69021d\transformed\ui-tooling-preview-release\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\7c8703334e4497b84bc6eb894ceedd62\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-graphics-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\7c8703334e4497b84bc6eb894ceedd62\transformed\ui-graphics-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\a5afa25fe7ec0267c02085c8a4f6747e\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.ui:ui-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\a5afa25fe7ec0267c02085c8a4f6747e\transformed\ui-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\premd\.gradle\caches\transforms-3\d2456d9bf2d7007bd9afad4cbc736c02\transformed\activity-ktx-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] C:\Users\premd\.gradle\caches\transforms-3\d2456d9bf2d7007bd9afad4cbc736c02\transformed\activity-ktx-1.8.2\AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\dcc16a86e36bdeb6da6065a0c0357d72\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\dcc16a86e36bdeb6da6065a0c0357d72\transformed\customview-poolingcontainer-1.0.0\AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\44c22a29cdd479df7121d1c898359b3f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\44c22a29cdd479df7121d1c898359b3f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\998b55b9fb7e2bacc2dff3d5c2a7b48a\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\998b55b9fb7e2bacc2dff3d5c2a7b48a\transformed\lifecycle-livedata-core-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\4ee0d9a75d2bcda185a53e0afed5aabd\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\4ee0d9a75d2bcda185a53e0afed5aabd\transformed\lifecycle-viewmodel-ktx-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\1a7969319ba623955dc25c21bbc859b1\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\1a7969319ba623955dc25c21bbc859b1\transformed\lifecycle-viewmodel-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\premd\.gradle\caches\transforms-3\9d65de3bb6e96cce00bdcb6020eb6d8a\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] C:\Users\premd\.gradle\caches\transforms-3\9d65de3bb6e96cce00bdcb6020eb6d8a\transformed\savedstate-ktx-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\premd\.gradle\caches\transforms-3\c48b1701facc5757a9dc45f8317b7358\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] C:\Users\premd\.gradle\caches\transforms-3\c48b1701facc5757a9dc45f8317b7358\transformed\savedstate-1.2.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\fcb2a8bd718f67841681e94a9ac8bb54\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\fcb2a8bd718f67841681e94a9ac8bb54\transformed\lifecycle-viewmodel-savedstate-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\5b239b90d780c16afdc1c7c7635ec8e1\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\5b239b90d780c16afdc1c7c7635ec8e1\transformed\core-ktx-1.12.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\41dc081a59d94d2f7b9c7de534e0bccc\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\41dc081a59d94d2f7b9c7de534e0bccc\transformed\autofill-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\c990a3be892b408a4d08833fbe9ed53b\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\c990a3be892b408a4d08833fbe9ed53b\transformed\lifecycle-runtime-2.7.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\c2d714ce60f7348d2751f555453e4a60\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\c2d714ce60f7348d2751f555453e4a60\transformed\lifecycle-runtime-ktx-2.7.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\5033df34c436c28e0062418bdfa34235\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\5033df34c436c28e0062418bdfa34235\transformed\runtime-saveable-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\cc84db7e9efb8a050e63816f2d5bcb89\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.compose.runtime:runtime-android:1.5.0] C:\Users\premd\.gradle\caches\transforms-3\cc84db7e9efb8a050e63816f2d5bcb89\transformed\runtime-release\AndroidManifest.xml:5:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\1eaadbaf2a7c5dddda17526adf3040e3\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\1eaadbaf2a7c5dddda17526adf3040e3\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\c31ee264d4734c8f93ea34d44f24ae1f\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\c31ee264d4734c8f93ea34d44f24ae1f\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\3406562d63d63a81fb039d7df847c11d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\3406562d63d63a81fb039d7df847c11d\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\premd\.gradle\caches\transforms-3\911712ca186cc966f4cd56d73c827562\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] C:\Users\premd\.gradle\caches\transforms-3\911712ca186cc966f4cd56d73c827562\transformed\core-runtime-2.2.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\8a7b5cf0418d3934702138360fa489e4\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\8a7b5cf0418d3934702138360fa489e4\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\49c67af455c782e9dc71c32884a85b94\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\premd\.gradle\caches\transforms-3\49c67af455c782e9dc71c32884a85b94\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+	android:targetSdkVersion
+		INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\premd\.gemini\antigravity-ide\scratch\WiFiDirectWalkieTalkie\app\src\main\AndroidManifest.xml
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\44c22a29cdd479df7121d1c898359b3f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\44c22a29cdd479df7121d1c898359b3f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\8a7b5cf0418d3934702138360fa489e4\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\premd\.gradle\caches\transforms-3\8a7b5cf0418d3934702138360fa489e4\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.4.0] C:\Users\premd\.gradle\caches\transforms-3\05121284987d0e15b6bbefcabc6dfd5d\transformed\emoji2-1.4.0\AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\44c22a29cdd479df7121d1c898359b3f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\44c22a29cdd479df7121d1c898359b3f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\premd\.gradle\caches\transforms-3\44c22a29cdd479df7121d1c898359b3f\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+permission#com.example.wifidirectwalkietalkie.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+uses-permission#com.example.wifidirectwalkietalkie.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] C:\Users\premd\.gradle\caches\transforms-3\04b5936cf70585fe5227ada488037a2d\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\premd\.gradle\caches\transforms-3\0fd15156a93a77d382ea728b82dfcef1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
