@@ -58,20 +58,26 @@ class MainActivity : ComponentActivity() {
         } else true
 
         if (nearbyGranted && audioGranted) {
+            startWalkieTalkieService()
             walkieTalkieServiceState.value?.wifiDirectManager?.discoverPeers()
         }
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // Start and bind the foreground service
+    private fun startWalkieTalkieService() {
         val intent = Intent(this, WalkieTalkieService::class.java)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             startForegroundService(intent)
         } else {
             startService(intent)
         }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Bind the service, but do not start it as a foreground service yet.
+        // It will be started as a foreground service after permissions are granted.
+        val intent = Intent(this, WalkieTalkieService::class.java)
         bindService(intent, connection, Context.BIND_AUTO_CREATE)
 
         setContent {
@@ -115,12 +121,14 @@ class MainActivity : ComponentActivity() {
             }
 
             if (permissionsToRequest.isEmpty()) {
+                startWalkieTalkieService()
                 walkieTalkieServiceState.value?.wifiDirectManager?.discoverPeers()
             } else {
                 requestPermissionLauncher.launch(permissionsToRequest.toTypedArray())
             }
         } else {
             // Older Android versions
+            startWalkieTalkieService()
             walkieTalkieServiceState.value?.wifiDirectManager?.discoverPeers()
         }
     }

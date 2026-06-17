@@ -31067,6 +31067,7 @@ com.example.wifidirectwalkietalkie.MainActivity:
     static void <clinit>()
     public static final boolean access$WalkieTalkieApp$lambda$2(androidx.compose.runtime.State)
     public static void checkPermissionsAndDiscover()
+    public final void startWalkieTalkieService()
 com.example.wifidirectwalkietalkie.R$raw
 com.example.wifidirectwalkietalkie.WalkieTalkieService$LocalBinder:
     public static com.example.wifidirectwalkietalkie.WalkieTalkieService getService()
