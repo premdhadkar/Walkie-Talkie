@@ -19,6 +19,8 @@ import androidx.core.app.NotificationCompat
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
 class WalkieTalkieService : Service() {
@@ -69,6 +71,16 @@ class WalkieTalkieService : Service() {
                 } else {
                     audioStreamer.disconnect()
                 }
+            }
+        }
+
+        // Continuous peer discovery loop
+        serviceScope.launch {
+            while (isActive) {
+                if (!wifiDirectManager.isConnected.value) {
+                    wifiDirectManager.discoverPeers()
+                }
+                delay(5000) // Scan every 10 seconds
             }
         }
     }

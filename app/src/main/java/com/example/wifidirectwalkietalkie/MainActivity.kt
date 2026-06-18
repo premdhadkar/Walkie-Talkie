@@ -212,15 +212,11 @@ class MainActivity : ComponentActivity() {
                 } else {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
-                        horizontalArrangement = Arrangement.SpaceBetween
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
                     ) {
                         Text("Available Devices", style = MaterialTheme.typography.titleMedium)
-                        Button(
-                            onClick = { checkPermissionsAndDiscover() },
-                            border = androidx.compose.foundation.BorderStroke(1.dp, Color.White)
-                        ) {
-                            Text("Scan")
-                        }
+                        Text("Scanning...", style = MaterialTheme.typography.bodySmall, color = Color.Gray)
                     }
 
                     LazyColumn(modifier = Modifier.weight(1f)) {
