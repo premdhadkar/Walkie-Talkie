@@ -145,8 +145,9 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun WalkieTalkieApp(service: WalkieTalkieService) {
         val peers by service.wifiDirectManager.peers.collectAsState()
-        val isConnected by service.wifiDirectManager.isConnected.collectAsState()
+        val isConnected by service.actualConnectionState.collectAsState()
         val isReceiving by service.audioStreamer.isReceiving.collectAsState()
+        val signalQuality by service.audioStreamer.signalQuality.collectAsState()
 
         Surface(
             modifier = Modifier.fillMaxSize(),
@@ -165,7 +166,23 @@ class MainActivity : ComponentActivity() {
                 )
 
                 if (isConnected) {
-                    Text("Connected!", color = MaterialTheme.colorScheme.primary)
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.SpaceBetween,
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        Text("Connected!", color = MaterialTheme.colorScheme.primary)
+                        Text(
+                            text = "Signal: ${signalQuality.name}", 
+                            color = when (signalQuality) {
+                                AudioStreamer.SignalQuality.EXCELLENT -> Color.Green
+                                AudioStreamer.SignalQuality.GOOD -> Color.Yellow
+                                AudioStreamer.SignalQuality.POOR -> Color.Red
+                                else -> Color.Gray
+                            },
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                    }
                     Spacer(modifier = Modifier.weight(1f))
                     
                     // Push to Talk Button

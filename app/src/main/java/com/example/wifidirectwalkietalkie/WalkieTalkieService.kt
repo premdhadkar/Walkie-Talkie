@@ -16,9 +16,13 @@ import android.os.Build
 import android.os.IBinder
 import android.os.PowerManager
 import androidx.core.app.NotificationCompat
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
@@ -34,6 +38,11 @@ class WalkieTalkieService : Service() {
     lateinit var audioStreamer: AudioStreamer
     private lateinit var receiver: WiFiDirectBroadcastReceiver
     private lateinit var intentFilter: IntentFilter
+
+    private val _actualConnectionState = MutableStateFlow(false)
+    val actualConnectionState: StateFlow<Boolean> = _actualConnectionState.asStateFlow()
+
+    private var disconnectJob: Job? = null
 
     private var wakeLock: PowerManager.WakeLock? = null
 
@@ -63,24 +72,47 @@ class WalkieTalkieService : Service() {
         serviceScope.launch {
             wifiDirectManager.connectionInfo.collect { info ->
                 if (info != null && info.groupFormed) {
+                    disconnectJob?.cancel()
+                    _actualConnectionState.value = true
                     if (info.isGroupOwner) {
                         audioStreamer.startServer()
                     } else if (info.groupOwnerAddress != null) {
                         audioStreamer.startClient(info.groupOwnerAddress)
                     }
                 } else {
-                    audioStreamer.disconnect()
+                    if (wifiDirectManager.isUserInitiatedDisconnect) {
+                        audioStreamer.disconnect()
+                        _actualConnectionState.value = false
+                    } else {
+                        // Unexpected drop. Try auto-reconnect, delay UI disconnect
+                        disconnectJob?.cancel()
+                        disconnectJob = serviceScope.launch {
+                            delay(2500)
+                            _actualConnectionState.value = false
+                            audioStreamer.disconnect()
+                        }
+                    }
                 }
             }
         }
 
-        // Continuous peer discovery loop
+        // Continuous peer discovery loop and Auto-reconnect
         serviceScope.launch {
             while (isActive) {
                 if (!wifiDirectManager.isConnected.value) {
                     wifiDirectManager.discoverPeers()
+                    
+                    val lastDevice = wifiDirectManager.lastConnectedDevice
+                    if (!wifiDirectManager.isUserInitiatedDisconnect && lastDevice != null) {
+                        delay(500)
+                        wifiDirectManager.connect(lastDevice)
+                        delay(2500) // retry more aggressively when dropped
+                    } else {
+                        delay(5000) // Scan every 5 seconds normally
+                    }
+                } else {
+                    delay(5000)
                 }
-                delay(5000) // Scan every 10 seconds
             }
         }
     }

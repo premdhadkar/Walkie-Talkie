@@ -26,6 +26,11 @@ class WifiDirectManager(
     private val _isConnected = MutableStateFlow(false)
     val isConnected: StateFlow<Boolean> = _isConnected.asStateFlow()
 
+    var lastConnectedDevice: WifiP2pDevice? = null
+        private set
+    var isUserInitiatedDisconnect = false
+        private set
+
     private val peerListListener = WifiP2pManager.PeerListListener { peerList ->
         val refreshedPeers = peerList.deviceList.toList()
         if (refreshedPeers != _peers.value) {
@@ -53,8 +58,18 @@ class WifiDirectManager(
 
     @SuppressLint("MissingPermission")
     fun connect(device: WifiP2pDevice) {
-        val config = WifiP2pConfig().apply {
-            deviceAddress = device.deviceAddress
+        lastConnectedDevice = device
+        isUserInitiatedDisconnect = false
+        val config = if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+            WifiP2pConfig.Builder()
+                .setDeviceAddress(android.net.MacAddress.fromString(device.deviceAddress))
+                .setGroupOperatingBand(WifiP2pConfig.GROUP_OWNER_BAND_2GHZ)
+                .build()
+        } else {
+            WifiP2pConfig().apply {
+                deviceAddress = device.deviceAddress
+                groupOwnerIntent = 15
+            }
         }
         manager.connect(channel, config, object : WifiP2pManager.ActionListener {
             override fun onSuccess() {
@@ -68,6 +83,8 @@ class WifiDirectManager(
     }
     
     fun disconnect() {
+        isUserInitiatedDisconnect = true
+        lastConnectedDevice = null
         manager.removeGroup(channel, object : WifiP2pManager.ActionListener {
             override fun onSuccess() {
                 _isConnected.value = false

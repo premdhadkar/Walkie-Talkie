@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -22,6 +23,7 @@ import java.io.OutputStream
 import java.net.InetAddress
 import java.net.ServerSocket
 import java.net.Socket
+import java.util.concurrent.ConcurrentLinkedQueue
 
 class AudioStreamer(private val context: Context, private val coroutineScope: CoroutineScope) {
     private val sampleRate = 16000
@@ -44,6 +46,16 @@ class AudioStreamer(private val context: Context, private val coroutineScope: Co
 
     private val _isReceiving = MutableStateFlow(false)
     val isReceiving: StateFlow<Boolean> = _isReceiving.asStateFlow()
+
+    enum class SignalQuality { EXCELLENT, GOOD, POOR, DISCONNECTED }
+    private val _signalQuality = MutableStateFlow(SignalQuality.DISCONNECTED)
+    val signalQuality: StateFlow<SignalQuality> = _signalQuality.asStateFlow()
+
+    private val audioBuffer = ConcurrentLinkedQueue<ByteArray>()
+    private var currentBufferSize = 0
+    private val maxBufferSizeBytes = 16000 * 2 * 2 // ~2 seconds of 16-bit mono 16kHz audio
+
+    private var pingJob: Job? = null
 
     fun startServer() {
         coroutineScope.launch(Dispatchers.IO) {
@@ -75,8 +87,36 @@ class AudioStreamer(private val context: Context, private val coroutineScope: Co
             inputStream = socket.getInputStream()
             outputStream = socket.getOutputStream()
             startReceivingAudio()
+            startPingJob(socket.inetAddress)
+            flushAudioBuffer()
         } catch (e: Exception) {
             e.printStackTrace()
+        }
+    }
+
+    private fun startPingJob(address: InetAddress) {
+        pingJob?.cancel()
+        pingJob = coroutineScope.launch(Dispatchers.IO) {
+            while (isActive) {
+                try {
+                    val start = System.currentTimeMillis()
+                    val reachable = address.isReachable(1000)
+                    val latency = System.currentTimeMillis() - start
+                    
+                    if (reachable) {
+                        _signalQuality.value = when {
+                            latency < 100 -> SignalQuality.EXCELLENT
+                            latency < 300 -> SignalQuality.GOOD
+                            else -> SignalQuality.POOR
+                        }
+                    } else {
+                        _signalQuality.value = SignalQuality.POOR
+                    }
+                } catch (e: Exception) {
+                    _signalQuality.value = SignalQuality.POOR
+                }
+                delay(1000)
+            }
         }
     }
 
@@ -146,35 +186,65 @@ class AudioStreamer(private val context: Context, private val coroutineScope: Co
 
     @SuppressLint("MissingPermission") // RECORD_AUDIO checked in UI
     fun startRecording() {
-        if (isRecording || outputStream == null) return
+        if (isRecording) return
         isRecording = true
 
-        audioRecord = AudioRecord(
-            MediaRecorder.AudioSource.MIC,
-            sampleRate,
-            channelConfigRecord,
-            audioFormat,
-            bufferSize
-        )
+        if (audioRecord == null) {
+            audioRecord = AudioRecord(
+                MediaRecorder.AudioSource.MIC,
+                sampleRate,
+                channelConfigRecord,
+                audioFormat,
+                bufferSize
+            )
+        }
 
         audioRecord?.startRecording()
 
+        sendJob?.cancel()
         sendJob = coroutineScope.launch(Dispatchers.IO) {
             val buffer = ByteArray(bufferSize)
             try {
                 while (isActive && isRecording) {
                     val readBytes = audioRecord?.read(buffer, 0, buffer.size) ?: -1
                     if (readBytes > 0) {
-                        outputStream?.write(buffer, 0, readBytes)
-                        outputStream?.flush()
+                        val chunk = buffer.copyOf(readBytes)
+                        if (outputStream != null) {
+                            try {
+                                flushAudioBuffer()
+                                outputStream?.write(chunk)
+                                outputStream?.flush()
+                            } catch (e: Exception) {
+                                // Socket broken, buffer it
+                                outputStream = null
+                                enqueueAudio(chunk)
+                            }
+                        } else {
+                            enqueueAudio(chunk)
+                        }
                     }
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
-            } finally {
-                withContext(Dispatchers.Main) {
-                    stopRecording()
-                }
+            }
+        }
+    }
+
+    private fun enqueueAudio(chunk: ByteArray) {
+        audioBuffer.add(chunk)
+        currentBufferSize += chunk.size
+        while (currentBufferSize > maxBufferSizeBytes && audioBuffer.isNotEmpty()) {
+            val removed = audioBuffer.poll()
+            if (removed != null) currentBufferSize -= removed.size
+        }
+    }
+
+    private fun flushAudioBuffer() {
+        while (audioBuffer.isNotEmpty()) {
+            val chunk = audioBuffer.poll()
+            if (chunk != null) {
+                outputStream?.write(chunk)
+                currentBufferSize -= chunk.size
             }
         }
     }
@@ -185,17 +255,29 @@ class AudioStreamer(private val context: Context, private val coroutineScope: Co
         sendJob = null
         try {
             audioRecord?.stop()
-            audioRecord?.release()
         } catch (e: Exception) {
             e.printStackTrace()
         }
-        audioRecord = null
+        audioBuffer.clear()
+        currentBufferSize = 0
     }
 
     fun disconnect() {
         receiveJob?.cancel()
         sendJob?.cancel()
-        stopRecording()
+        pingJob?.cancel()
+        isRecording = false
+        _signalQuality.value = SignalQuality.DISCONNECTED
+        try {
+            audioRecord?.stop()
+            audioRecord?.release()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        audioRecord = null
+        audioBuffer.clear()
+        currentBufferSize = 0
+
         try {
             audioTrack?.stop()
             audioTrack?.release()
