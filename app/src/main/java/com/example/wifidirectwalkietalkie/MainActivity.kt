@@ -169,7 +169,8 @@ class MainActivity : ComponentActivity() {
                     Spacer(modifier = Modifier.weight(1f))
                     
                     // Push to Talk Button
-                    val buttonColor = if (isReceiving) Color.Red else Color.Black
+                    var isPressed by remember { mutableStateOf(false) }
+                    val buttonColor = if (isReceiving) Color.Red else if (isPressed) Color.Blue else Color.Black
                     Button(
                         onClick = { },
                         enabled = !isReceiving,
@@ -185,10 +186,12 @@ class MainActivity : ComponentActivity() {
                                 if (isReceiving) return@pointerInteropFilter false
                                 when (motionEvent.action) {
                                     MotionEvent.ACTION_DOWN -> {
+                                        isPressed = true
                                         service.audioStreamer.startRecording()
                                         true
                                     }
                                     MotionEvent.ACTION_UP, MotionEvent.ACTION_CANCEL -> {
+                                        isPressed = false
                                         service.audioStreamer.stopRecording()
                                         true
                                     }

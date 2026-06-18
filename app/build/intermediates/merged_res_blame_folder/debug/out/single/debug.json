@@ -10,5 +10,9 @@
     {
         "merged": "C:\\Users\\premd\\.gradle\\daemon\\8.4\\com.example.wifidirectwalkietalkie.app-merged_res-4:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\premd\\.gradle\\daemon\\8.4\\com.example.wifidirectwalkietalkie.app-main-6:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\premd\\.gradle\\daemon\\8.4\\com.example.wifidirectwalkietalkie.app-merged_res-4:\\raw_roger_sound.mp3.flat",
+        "source": "C:\\Users\\premd\\.gradle\\daemon\\8.4\\com.example.wifidirectwalkietalkie.app-main-6:\\raw\\roger_sound.mp3"
     }
 ]

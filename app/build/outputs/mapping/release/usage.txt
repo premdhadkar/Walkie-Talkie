@@ -22510,7 +22510,6 @@ androidx.compose.foundation.BorderModifierNode$drawGenericBorder$1:
     public static androidx.compose.ui.text.font.TypefaceResult invoke()
     public final void invoke(android.view.MotionEvent)
     public final void invoke(androidx.compose.ui.input.pointer.PointerInputChange)
-    public static java.lang.Boolean invoke$1()
     public final void invoke$1()
     public final void invoke$2()
     public static void invoke$4()
@@ -22529,6 +22528,7 @@ androidx.compose.foundation.BorderModifierNode$drawWithCacheModifierNode$1:
     public final void invoke(androidx.compose.ui.input.pointer.PointerInputChange)
     public final void invoke(androidx.compose.ui.node.AlignmentLinesOwner)
     public final void invoke(java.lang.Throwable)
+    public final java.lang.Boolean invoke$1()
     public final java.lang.CharSequence invoke$1()
     public static java.lang.Integer invoke$1()
     public final void invoke$10()
@@ -22537,7 +22537,6 @@ androidx.compose.foundation.BorderModifierNode$drawWithCacheModifierNode$1:
     public static java.lang.CharSequence invoke$2()
     public static java.lang.Float invoke$2()
     public final void invoke$2()
-    public final java.lang.Boolean invoke$3()
     public final void invoke$6()
     public static java.lang.Object invoke$7()
     public final void invoke$7()
@@ -22719,6 +22718,7 @@ androidx.compose.foundation.gestures.ContentInViewModifier$WhenMappings
 androidx.compose.foundation.gestures.ContentInViewModifier$launchAnimation$1$1$1:
     public static void invoke$13()
     public static void invoke$14()
+    public static java.lang.Boolean invoke$3()
     public static java.lang.Boolean invoke$4()
 androidx.compose.foundation.gestures.ContentInViewModifier$launchAnimation$1$1$2
 androidx.compose.foundation.gestures.ContentInViewModifier$launchAnimation$1$1:
@@ -22789,7 +22789,7 @@ androidx.compose.foundation.gestures.DraggableKt$awaitDownAndSlop$postPointerSlo
 androidx.compose.foundation.gestures.DraggableKt$awaitDrag$2:
     public final void invoke(androidx.compose.ui.input.pointer.PointerInputChange)
 androidx.compose.foundation.gestures.DraggableKt$onDragOrUp$motionFromChange$1:
-    public final java.lang.Boolean invoke$2()
+    public final java.lang.Boolean invoke$1()
 androidx.compose.foundation.gestures.DraggableKt$onDragOrUp$motionFromChange$2
 androidx.compose.foundation.gestures.DraggableKt
 androidx.compose.foundation.gestures.DraggableNode$_canDrag$1
@@ -25759,7 +25759,7 @@ androidx.compose.ui.CombinedModifier:
 androidx.compose.ui.ComposedModifier:
     public static kotlin.jvm.functions.Function3 getFactory()
 androidx.compose.ui.ComposedModifierKt$materialize$1:
-    public final java.lang.Boolean invoke$3()
+    public final java.lang.Boolean invoke$2()
 androidx.compose.ui.ComposedModifierKt$materialize$result$1
 androidx.compose.ui.CompositionLocalMapInjectionElement:
     public static androidx.compose.ui.CompositionLocalMapInjectionNode create()
@@ -31054,6 +31054,7 @@ com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$6$invoke$$in
     public static void invoke$40()
 com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$6
 com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1:
+    public static final void access$invoke$lambda$4$lambda$2(androidx.compose.runtime.MutableState,boolean)
     public final void invoke(androidx.compose.runtime.Composer,int)
 com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$2
 com.example.wifidirectwalkietalkie.MainActivity$onCreate$1
