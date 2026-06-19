@@ -1736,7 +1736,6 @@ androidx.compose.foundation.layout.SideCalculator$Companion$TopSideCalculator$1
 androidx.compose.foundation.layout.SideCalculator$Companion
 androidx.compose.foundation.layout.SideCalculator
 androidx.compose.foundation.layout.SizeElement:
-    public synthetic void <init>(float,float,float,float,boolean,kotlin.jvm.functions.Function1,int,kotlin.jvm.internal.DefaultConstructorMarker)
     public void inspectableProperties(androidx.compose.ui.platform.InspectorInfo)
 androidx.compose.foundation.layout.SizeKt$height-3ABfNKs$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$heightIn-VpY3zN4$$inlined$debugInspectorInfo$1
@@ -1749,7 +1748,6 @@ androidx.compose.foundation.layout.SizeKt$requiredWidth-3ABfNKs$$inlined$debugIn
 androidx.compose.foundation.layout.SizeKt$requiredWidthIn-VpY3zN4$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$size-VpY3zN4$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$sizeIn-qDBjuR0$$inlined$debugInspectorInfo$1
-androidx.compose.foundation.layout.SizeKt$width-3ABfNKs$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt$widthIn-VpY3zN4$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt:
     public static synthetic androidx.compose.ui.Modifier defaultMinSize-VpY3zN4$default(androidx.compose.ui.Modifier,float,float,int,java.lang.Object)
@@ -1773,7 +1771,6 @@ androidx.compose.foundation.layout.SizeKt:
     public static final androidx.compose.ui.Modifier size-VpY3zN4(androidx.compose.ui.Modifier,float,float)
     public static final androidx.compose.ui.Modifier sizeIn-qDBjuR0(androidx.compose.ui.Modifier,float,float,float,float)
     public static synthetic androidx.compose.ui.Modifier sizeIn-qDBjuR0$default(androidx.compose.ui.Modifier,float,float,float,float,int,java.lang.Object)
-    public static final androidx.compose.ui.Modifier width-3ABfNKs(androidx.compose.ui.Modifier,float)
     public static final androidx.compose.ui.Modifier widthIn-VpY3zN4(androidx.compose.ui.Modifier,float,float)
     public static synthetic androidx.compose.ui.Modifier widthIn-VpY3zN4$default(androidx.compose.ui.Modifier,float,float,int,java.lang.Object)
     public static final androidx.compose.ui.Modifier wrapContentHeight(androidx.compose.ui.Modifier,androidx.compose.ui.Alignment$Vertical,boolean)
@@ -4615,7 +4612,6 @@ androidx.compose.material3.Typography:
     public void <init>()
     public final androidx.compose.material3.Typography copy(androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle)
     public static synthetic androidx.compose.material3.Typography copy$default(androidx.compose.material3.Typography,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,androidx.compose.ui.text.TextStyle,int,java.lang.Object)
-    public final androidx.compose.ui.text.TextStyle getBodyMedium()
     public final androidx.compose.ui.text.TextStyle getDisplayLarge()
     public final androidx.compose.ui.text.TextStyle getDisplayMedium()
     public final androidx.compose.ui.text.TextStyle getDisplaySmall()
@@ -6713,7 +6709,6 @@ androidx.compose.ui.graphics.Color$Companion:
     public final long getDarkGray-0d7_KjU()
     public static synthetic void getDarkGray-0d7_KjU$annotations()
     public static synthetic void getGray-0d7_KjU$annotations()
-    public final long getGreen-0d7_KjU()
     public static synthetic void getGreen-0d7_KjU$annotations()
     public final long getLightGray-0d7_KjU()
     public static synthetic void getLightGray-0d7_KjU$annotations()
@@ -6723,7 +6718,6 @@ androidx.compose.ui.graphics.Color$Companion:
     public static synthetic void getTransparent-0d7_KjU$annotations()
     public static synthetic void getUnspecified-0d7_KjU$annotations()
     public static synthetic void getWhite-0d7_KjU$annotations()
-    public final long getYellow-0d7_KjU()
     public static synthetic void getYellow-0d7_KjU$annotations()
     public final long hsl-JlNiLsg(float,float,float,float,androidx.compose.ui.graphics.colorspace.Rgb)
     public static synthetic long hsl-JlNiLsg$default(androidx.compose.ui.graphics.Color$Companion,float,float,float,float,androidx.compose.ui.graphics.colorspace.Rgb,int,java.lang.Object)
@@ -6734,10 +6728,8 @@ androidx.compose.ui.graphics.Color$Companion:
 androidx.compose.ui.graphics.Color:
     public static final synthetic long access$getCyan$cp()
     public static final synthetic long access$getDarkGray$cp()
-    public static final synthetic long access$getGreen$cp()
     public static final synthetic long access$getLightGray$cp()
     public static final synthetic long access$getMagenta$cp()
-    public static final synthetic long access$getYellow$cp()
     public static final float component1-impl(long)
     public static final float component2-impl(long)
     public static final float component3-impl(long)
@@ -14840,7 +14832,17 @@ androidx.versionedparcelable.VersionedParcelStream$1
 androidx.versionedparcelable.VersionedParcelStream$FieldBuffer
 androidx.versionedparcelable.VersionedParcelStream
 androidx.versionedparcelable.VersionedParcelize
-com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$6$invoke$$inlined$items$default$2
+com.example.wifidirectwalkietalkie.AudioStreamer$PeerConnection:
+    public final kotlinx.coroutines.Job getPingJob()
+    public final kotlinx.coroutines.Job getReceiveJob()
+    public final java.net.Socket getSocket()
+    public final void setInputStream(java.io.InputStream)
+    public final void setOutputStream(java.io.OutputStream)
+    public final void setPingJob(kotlinx.coroutines.Job)
+    public final void setReceiveJob(kotlinx.coroutines.Job)
+com.example.wifidirectwalkietalkie.AudioStreamer$SignalQuality:
+    public static kotlin.enums.EnumEntries getEntries()
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$7$invoke$$inlined$items$default$2
 com.example.wifidirectwalkietalkie.R$raw:
     private void <init>()
 com.example.wifidirectwalkietalkie.R$string
@@ -17684,7 +17686,6 @@ kotlin.collections.SetsKt___SetsKt:
     public static final java.util.Set minus(java.util.Set,java.lang.Object[])
     private static final java.util.Set minusElement(java.util.Set,java.lang.Object)
     public static final java.util.Set plus(java.util.Set,java.lang.Iterable)
-    public static final java.util.Set plus(java.util.Set,java.lang.Object)
     public static final java.util.Set plus(java.util.Set,kotlin.sequences.Sequence)
     public static final java.util.Set plus(java.util.Set,java.lang.Object[])
     private static final java.util.Set plusElement(java.util.Set,java.lang.Object)
@@ -22140,6 +22141,7 @@ androidx.compose.animation.SplineBasedFloatDecayAnimationSpec:
     public final float getVelocityFromNanos()
 androidx.compose.animation.core.Animatable$runAnimation$2$1:
     public final androidx.compose.runtime.DisposableEffectResult invoke(androidx.compose.runtime.DisposableEffectScope)
+    public static void invoke$1()
 androidx.compose.animation.core.Animatable$runAnimation$2:
     public final kotlin.coroutines.Continuation create()
     public final java.lang.Object invoke$1()
@@ -22344,18 +22346,18 @@ androidx.compose.animation.core.SuspendAnimationKt$animate$5:
 androidx.compose.animation.core.SuspendAnimationKt$animate$6$1:
     public final void invoke()
 androidx.compose.animation.core.SuspendAnimationKt$animate$6:
-    public final void invoke$1()
+    public final void invoke$2()
 androidx.compose.animation.core.SuspendAnimationKt$animate$7
 androidx.compose.animation.core.SuspendAnimationKt$animate$9:
-    public final void invoke$1()
+    public final void invoke$2()
 androidx.compose.animation.core.SuspendAnimationKt$animateDecay$4
 androidx.compose.animation.core.SuspendAnimationKt$callWithFrameNanos$2$$InternalSyntheticThrowCCEIfNotNull$12$1331a79a67b0e6ee6ddcdc8a41529845576a403bb378a8ea7d17591f3e64fb0c$0
 androidx.compose.animation.core.SuspendAnimationKt$callWithFrameNanos$2:
     public static androidx.compose.runtime.snapshots.ReadonlySnapshot invoke()
     public static androidx.compose.runtime.snapshots.Snapshot invoke()
     public final java.lang.Throwable invoke(java.lang.Throwable)
-    public final void invoke$2()
     public static java.lang.Object invoke$3()
+    public final void invoke$3()
 androidx.compose.animation.core.SuspendAnimationKt
 androidx.compose.animation.core.TargetBasedAnimation:
     static void <clinit>()
@@ -22464,7 +22466,7 @@ androidx.compose.foundation.AndroidEdgeEffectOverscrollEffect$effectModifier$1:
 androidx.compose.foundation.AndroidEdgeEffectOverscrollEffect$onNewSize$1$$InternalSyntheticThrowCCEIfNotNull$12$6a87c895798fe09c8b04c50507b68e865591d6ef42d5f74d215b4f476daa8f13$0
 androidx.compose.foundation.AndroidEdgeEffectOverscrollEffect$onNewSize$1:
     public final synthetic int $r8$classId
-    public final void invoke$2()
+    public final void invoke$3()
     public static void invoke-ozmzZPI()
 androidx.compose.foundation.AndroidEdgeEffectOverscrollEffect$special$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.AndroidEdgeEffectOverscrollEffect:
@@ -22498,8 +22500,8 @@ androidx.compose.foundation.BorderCache:
 androidx.compose.foundation.BorderKt$drawContentWithoutBorder$1$$InternalSyntheticThrowCCEIfNotNull$12$5a5de43b9de6c3b1273fdfc8abf4106d0dfeb334e2b177bf0513c284f934da4a$0
 androidx.compose.foundation.BorderKt$drawContentWithoutBorder$1:
     public final void invoke(androidx.compose.ui.graphics.drawscope.ContentDrawScope)
-    public final void invoke$2()
     public final void invoke$3()
+    public final void invoke$4()
 androidx.compose.foundation.BorderKt$drawRectBorder$1:
     public final void invoke(androidx.compose.ui.graphics.drawscope.ContentDrawScope)
 androidx.compose.foundation.BorderKt
@@ -22510,11 +22512,11 @@ androidx.compose.foundation.BorderModifierNode$drawGenericBorder$1:
     public static androidx.compose.ui.text.font.TypefaceResult invoke()
     public final void invoke(android.view.MotionEvent)
     public final void invoke(androidx.compose.ui.input.pointer.PointerInputChange)
-    public final void invoke$1()
     public final void invoke$2()
-    public static void invoke$4()
+    public final void invoke$3()
     public static void invoke$5()
     public static java.lang.Object invoke$6()
+    public static void invoke$6()
     public final long invoke-MK-Hz9U()
 androidx.compose.foundation.BorderModifierNode$drawGenericBorder$3
 androidx.compose.foundation.BorderModifierNode$drawRoundRectBorder$1:
@@ -22532,16 +22534,16 @@ androidx.compose.foundation.BorderModifierNode$drawWithCacheModifierNode$1:
     public final java.lang.CharSequence invoke$1()
     public static java.lang.Integer invoke$1()
     public final void invoke$10()
-    public static void invoke$11()
+    public final void invoke$11()
+    public static void invoke$12()
     public final java.lang.Boolean invoke$2()
     public static java.lang.CharSequence invoke$2()
     public static java.lang.Float invoke$2()
-    public final void invoke$2()
-    public final void invoke$6()
+    public final void invoke$3()
     public static java.lang.Object invoke$7()
     public final void invoke$7()
-    public static void invoke$8()
-    public final void invoke$9()
+    public final void invoke$8()
+    public static void invoke$9()
 androidx.compose.foundation.BorderModifierNode:
     public static androidx.compose.ui.draw.DrawResult drawGenericBorder()
     public static androidx.compose.ui.draw.DrawResult drawRoundRectBorder-JqoCqck()
@@ -22568,8 +22570,8 @@ androidx.compose.foundation.ClickableKt$clickable$2:
 androidx.compose.foundation.ClickableKt$clickable-O2vRcR0$$inlined$debugInspectorInfo$1$$InternalSyntheticThrowCCEIfNotNull$12$8e3252ef1ed6df6abd1ed7ddfb26a94cb7990345bc09f2fad8d65a829269a6c2$0
 androidx.compose.foundation.ClickableKt$clickable-O2vRcR0$$inlined$debugInspectorInfo$1:
     public final synthetic int $r8$classId
-    public final void invoke$10()
-    public final void invoke$2()
+    public final void invoke$11()
+    public final void invoke$3()
 androidx.compose.foundation.ClickableKt$clickable-XHw0xAI$$inlined$debugInspectorInfo$1$$InternalSyntheticThrowCCEIfNotNull$12$87cc44d98de85cfa5999a54aa43af4db405c748c043011c81664e61e7f803cc3$0
 androidx.compose.foundation.ClickableKt$clickable-XHw0xAI$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.ClickableKt$handlePressInteraction$2$delayJob$1:
@@ -22638,7 +22640,7 @@ androidx.compose.foundation.FocusableKt$focusableInNonTouchMode$1$$InternalSynth
 androidx.compose.foundation.FocusableKt$focusableInNonTouchMode$1:
     public final synthetic boolean $enabled
     public final synthetic int $r8$classId
-    public final void invoke$2()
+    public final void invoke$3()
 androidx.compose.foundation.FocusableKt$special$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.FocusableNode$onFocusEvent$1:
     public final java.lang.Object invoke$2()
@@ -22670,7 +22672,7 @@ androidx.compose.foundation.FocusedBoundsObserverElement:
     public static void update$5()
 androidx.compose.foundation.FocusedBoundsObserverNode:
     public static kotlin.jvm.functions.Function1 getParent()
-    public final void invoke$6()
+    public final void invoke$7()
     public static void setOnPositioned()
 androidx.compose.foundation.GlowEdgeEffectCompat
 androidx.compose.foundation.HoverableElement:
@@ -22686,7 +22688,7 @@ androidx.compose.foundation.HoverableNode:
 androidx.compose.foundation.IndicationKt$LocalIndication$1
 androidx.compose.foundation.IndicationKt$indication$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.IndicationKt$indication$2:
-    public static void invoke$12()
+    public static void invoke$13()
 androidx.compose.foundation.MutatePriority:
     public static final enum androidx.compose.foundation.MutatePriority PreventUserInput
 androidx.compose.foundation.MutationInterruptedException
@@ -22716,7 +22718,6 @@ androidx.compose.foundation.gestures.ContentInViewModifier$Request:
     public static kotlin.jvm.functions.Function0 getCurrentBounds()
 androidx.compose.foundation.gestures.ContentInViewModifier$WhenMappings
 androidx.compose.foundation.gestures.ContentInViewModifier$launchAnimation$1$1$1:
-    public static void invoke$13()
     public static void invoke$14()
     public static java.lang.Boolean invoke$3()
     public static java.lang.Boolean invoke$4()
@@ -22915,7 +22916,7 @@ androidx.compose.foundation.gestures.TapGestureDetectorKt$detectTapAndPress$2:
     public final java.lang.Object invoke$2()
 androidx.compose.foundation.gestures.UpdatableAnimationState$Companion
 androidx.compose.foundation.gestures.UpdatableAnimationState$animateToZero$3:
-    public final void invoke$1()
+    public final void invoke$2()
 androidx.compose.foundation.gestures.UpdatableAnimationState$animateToZero$4
 androidx.compose.foundation.gestures.UpdatableAnimationState:
     public static final _COROUTINE.ArtificialStackFrames Companion
@@ -23067,18 +23068,18 @@ androidx.compose.foundation.layout.PaddingKt$padding$1:
     public final synthetic float $start
     public final synthetic float $top
     public void <init>(float,float,float,float)
-    public final void invoke$2()
+    public final void invoke$3()
 androidx.compose.foundation.layout.PaddingKt$padding$2:
     public final synthetic float $horizontal
     public final synthetic float $vertical
     public void <init>(float,float)
-    public final void invoke$2()
+    public final void invoke$3()
+androidx.compose.foundation.layout.PaddingKt$padding$3$$InternalSyntheticThrowCCEIfNotNull$14$ca8319c36ce4f142fd66446f82c988040dca3a3043368aea71907231518f7075$0
 androidx.compose.foundation.layout.PaddingKt$padding$3$$InternalSyntheticThrowCCEIfNotNull$14$f8cd89fe2ba209fffb60062a3255107c743dba5ff93de55c1c21a72adb0910e0$0
 androidx.compose.foundation.layout.PaddingKt$padding$3:
     public final synthetic float $all
     public final synthetic int $r8$classId
     public synthetic void <init>(float)
-    public final void invoke$2()
 androidx.compose.foundation.layout.PaddingKt$padding$4
 androidx.compose.foundation.layout.PaddingKt:
     public static final androidx.compose.foundation.layout.PaddingValuesImpl PaddingValues-a9UjIt4(float,float,float,float)
@@ -23134,6 +23135,7 @@ androidx.compose.foundation.layout.SizeElement:
     public static androidx.compose.foundation.layout.SizeNode create()
     public static void update$13()
 androidx.compose.foundation.layout.SizeKt$size-3ABfNKs$$inlined$debugInspectorInfo$1
+androidx.compose.foundation.layout.SizeKt$width-3ABfNKs$$inlined$debugInspectorInfo$1
 androidx.compose.foundation.layout.SizeKt:
     public static final androidx.compose.foundation.layout.FillElement FillWholeMaxHeight
     public static final androidx.compose.foundation.layout.WrapContentElement WrapContentHeightCenter
@@ -23383,7 +23385,7 @@ androidx.compose.foundation.lazy.layout.IntervalList
 androidx.compose.foundation.lazy.layout.IntervalListKt
 androidx.compose.foundation.lazy.layout.LazyLayoutAnimateItemModifierNode$Companion
 androidx.compose.foundation.lazy.layout.LazyLayoutAnimateItemModifierNode
-androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo$$InternalSynthetic$IA$271$21f0deeb2c3cb9ef02bd0dadba65f57d23e829c6fcd58f537f3f50e7ef01fedf$0
+androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo$$InternalSynthetic$IA$272$21f0deeb2c3cb9ef02bd0dadba65f57d23e829c6fcd58f537f3f50e7ef01fedf$0
 androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo$$InternalSyntheticThrowCCEIfNotNull$22$c6787628647928fd9f7baf97edf6578bcba36eaefd87ce01b2e5dcfc685dfabf$0
 androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo$$InternalSyntheticThrowCCEIfNotNull$7$72667648d88d42663f0e2173a31fdbc4c9964349911477cf7df0604e6cdfef82$0
 androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo$$InternalSyntheticThrowCCEIfNotNull$7$72667648d88d42663f0e2173a31fdbc4c9964349911477cf7df0604e6cdfef82$1
@@ -23392,7 +23394,7 @@ androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo$Interval:
     public static int getEnd()
     public static int getStart()
 androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo:
-    public void <init>(androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo$$InternalSynthetic$IA$271$21f0deeb2c3cb9ef02bd0dadba65f57d23e829c6fcd58f537f3f50e7ef01fedf$0)
+    public void <init>(androidx.compose.foundation.lazy.layout.LazyLayoutBeyondBoundsInfo$$InternalSynthetic$IA$272$21f0deeb2c3cb9ef02bd0dadba65f57d23e829c6fcd58f537f3f50e7ef01fedf$0)
     public void <init>(androidx.compose.ui.platform.AndroidComposeView)
     public final void add(int)
     public static void addFontFamily()
@@ -23937,7 +23939,7 @@ androidx.compose.material3.ButtonElevation:
     public static androidx.compose.runtime.State shadowElevation$material3_release()
     public static androidx.compose.runtime.State tonalElevation$material3_release()
 androidx.compose.material3.ButtonKt$Button$2:
-    public final void invoke$10()
+    public final void invoke$11()
 androidx.compose.material3.ButtonKt$Button$3$1
 androidx.compose.material3.ButtonKt$Button$3:
     public final void invoke(androidx.compose.runtime.Composer,int)
@@ -24069,7 +24071,7 @@ androidx.compose.material3.ShapesKt$LocalShapes$1
 androidx.compose.material3.ShapesKt$WhenMappings
 androidx.compose.material3.SurfaceKt$LocalAbsoluteTonalElevation$1
 androidx.compose.material3.SurfaceKt$Surface$1$1:
-    public final void invoke$10()
+    public final void invoke$11()
 androidx.compose.material3.SurfaceKt$Surface$1$2:
     public int label
     public final java.lang.Object invoke$4()
@@ -24087,6 +24089,7 @@ androidx.compose.material3.TextKt$Text$2:
 androidx.compose.material3.Typography:
     static void <clinit>()
     public static androidx.compose.ui.text.TextStyle getBodyLarge()
+    public static androidx.compose.ui.text.TextStyle getBodyMedium()
     public static androidx.compose.ui.text.TextStyle getBodySmall()
     public static androidx.compose.ui.text.TextStyle getHeadlineMedium()
     public static androidx.compose.ui.text.TextStyle getLabelLarge()
@@ -24512,7 +24515,7 @@ androidx.compose.runtime.ComposerImpl$CompositionContextImpl:
     public final androidx.compose.runtime.MovableContentState movableContentStateResolve$runtime_release()
     public static void setCompositionLocalScope()
     public static void updateCompositionLocalScope()
-androidx.compose.runtime.ComposerImpl$apply$operation$1$$InternalSyntheticThrowCCEIfNotNull$274$750193d773c187791fa3fbff70342424812b0525f45d3d594caa91a0e115ec99$0
+androidx.compose.runtime.ComposerImpl$apply$operation$1$$InternalSyntheticThrowCCEIfNotNull$275$750193d773c187791fa3fbff70342424812b0525f45d3d594caa91a0e115ec99$0
 androidx.compose.runtime.ComposerImpl$createNode$2:
     public final void invoke(androidx.compose.runtime.Applier,androidx.compose.runtime.SlotWriter,androidx.compose.runtime.CompositionImpl$RememberEventDispatcher)
 androidx.compose.runtime.ComposerImpl$createNode$3
@@ -24913,7 +24916,7 @@ androidx.compose.runtime.Recomposer$recompositionRunner$2$unregisterApplyObserve
 androidx.compose.runtime.Recomposer$recompositionRunner$2:
     public final java.lang.Object invoke$2()
 androidx.compose.runtime.Recomposer$runRecomposeAndApplyChanges$2$1:
-    public final void invoke$1()
+    public final void invoke$2()
 androidx.compose.runtime.Recomposer$runRecomposeAndApplyChanges$2:
     public static java.lang.Object invoke$11()
 androidx.compose.runtime.Recomposer$writeObserverOf$1:
@@ -25400,6 +25403,7 @@ androidx.compose.runtime.internal.PersistentCompositionLocalHashMap$Companion:
     public static int getFill-TiuSbCo()
     public static int getGpu-_sVssgQ()
     public static long getGray-0d7_KjU()
+    public static long getGreen-0d7_KjU()
     public static int getHardlight-0nO6VwU()
     public static int getHue-0nO6VwU()
     public static long getInfinite-F1C5BW0()
@@ -25448,6 +25452,7 @@ androidx.compose.runtime.internal.PersistentCompositionLocalHashMap$Companion:
     public static long getWhite-0d7_KjU()
     public static int getXor-0nO6VwU()
     public static long getXyz-xdoWZVw()
+    public static long getYellow-0d7_KjU()
     public static androidx.compose.ui.geometry.Rect getZero()
     public static long getZero-F1C5BW0()
     public static long getZero-NH-jbRc()
@@ -25836,8 +25841,8 @@ androidx.compose.ui.draw.DrawResult:
 androidx.compose.ui.draw.ShadowKt$shadow$2$1$$InternalSyntheticThrowCCEIfNotNull$29$3afbfb706bb1c34cf50647ce9d335defd188e0fd45b009d05c5d88d48103fe43$0
 androidx.compose.ui.draw.ShadowKt$shadow$2$1:
     public final synthetic int $r8$classId
-    public final void invoke$2()
     public final void invoke$23()
+    public final void invoke$3()
 androidx.compose.ui.draw.ShadowKt$shadow-s4CzXII$$inlined$debugInspectorInfo$1
 androidx.compose.ui.draw.ShadowKt
 androidx.compose.ui.focus.BeyondBoundsLayoutKt
@@ -26206,10 +26211,8 @@ androidx.compose.ui.graphics.Color:
     public static final androidx.compose.runtime.internal.PersistentCompositionLocalHashMap$Companion Companion
     public static final long Cyan
     public static final long DarkGray
-    public static final long Green
     public static final long LightGray
     public static final long Magenta
-    public static final long Yellow
     public static synthetic long unbox-impl()
 androidx.compose.ui.graphics.ColorFilter$Companion
 androidx.compose.ui.graphics.ColorFilter:
@@ -27111,35 +27114,28 @@ androidx.compose.ui.input.pointer.PointerIcon$Companion:
     public static final androidx.compose.ui.input.pointer.PointerIcon Hand
     public static final androidx.compose.ui.input.pointer.PointerIcon Text
     public static androidx.compose.ui.input.pointer.PointerIcon getDefault()
-androidx.compose.ui.input.pointer.PointerIconKt$ModifierLocalPointerIcon$1
+androidx.compose.ui.input.pointer.PointerIconKt$ModifierLocalPointerIcon$1:
+    public static androidx.compose.ui.input.pointer.PointerIconModifierLocal invoke()
 androidx.compose.ui.input.pointer.PointerIconKt$pointerHoverIcon$$inlined$debugInspectorInfo$1
-androidx.compose.ui.input.pointer.PointerIconKt$pointerHoverIcon$2$1$1
+androidx.compose.ui.input.pointer.PointerIconKt$pointerHoverIcon$2$1$1:
+    public final void invoke()
 androidx.compose.ui.input.pointer.PointerIconKt$pointerHoverIcon$2$onSetIcon$1
-androidx.compose.ui.input.pointer.PointerIconKt$pointerHoverIcon$2$pointerInputModifier$1$1$1
-androidx.compose.ui.input.pointer.PointerIconKt$pointerHoverIcon$2$pointerInputModifier$1$1
-androidx.compose.ui.input.pointer.PointerIconKt$pointerHoverIcon$2
-androidx.compose.ui.input.pointer.PointerIconKt
-androidx.compose.ui.input.pointer.PointerIconModifierLocal$onModifierLocalsUpdated$1$1
+androidx.compose.ui.input.pointer.PointerIconKt$pointerHoverIcon$2$pointerInputModifier$1$1$1:
+    public final java.lang.Object invoke$5()
+androidx.compose.ui.input.pointer.PointerIconKt$pointerHoverIcon$2$pointerInputModifier$1$1:
+    public final java.lang.Object invoke$4()
+androidx.compose.ui.input.pointer.PointerIconKt$pointerHoverIcon$2:
+    public final androidx.compose.ui.Modifier invoke(androidx.compose.ui.Modifier,androidx.compose.runtime.Composer)
+    public static void invoke$24()
+androidx.compose.ui.input.pointer.PointerIconKt:
+    public static androidx.compose.ui.Modifier pointerHoverIcon$default(androidx.compose.ui.Modifier)
+androidx.compose.ui.input.pointer.PointerIconModifierLocal$onModifierLocalsUpdated$1$1:
+    public final void invoke$8()
 androidx.compose.ui.input.pointer.PointerIconModifierLocal:
-    public androidx.compose.ui.input.pointer.PointerIcon icon
-    public boolean isHovered
-    public boolean isPaused
-    public final androidx.compose.ui.modifier.ProvidableModifierLocal key
-    public kotlin.jvm.functions.Function1 onSetIcon
-    public boolean overrideDescendants
-    public final androidx.compose.runtime.ParcelableSnapshotMutableState parentInfo$delegate
-    public final androidx.compose.ui.input.pointer.PointerIconModifierLocal value
-    public void <init>(androidx.compose.ui.input.pointer.PointerIcon,boolean,androidx.compose.foundation.BorderModifierNode$drawWithCacheModifierNode$1)
     public static void enter()
     public static void exit()
     public final void exit(androidx.compose.ui.input.pointer.PointerIconModifierLocal)
-    public final androidx.compose.ui.modifier.ProvidableModifierLocal getKey()
-    public final androidx.compose.ui.input.pointer.PointerIconModifierLocal getParentInfo()
     public static androidx.compose.ui.input.pointer.PointerIconModifierLocal getValue()
-    public final java.lang.Object getValue()
-    public final boolean hasOverride()
-    public final void pause()
-    public final void reassignIcon()
     public static void setParentInfo()
     public static boolean shouldUpdatePointerIcon()
     public static void updateValues()
@@ -27483,8 +27479,8 @@ androidx.compose.ui.layout.SubcomposeLayoutKt$SubcomposeLayout$8:
 androidx.compose.ui.layout.SubcomposeLayoutKt
 androidx.compose.ui.layout.SubcomposeLayoutState$PrecomposedSlotHandle
 androidx.compose.ui.layout.SubcomposeLayoutState$setCompositionContext$1:
-    public static void invoke$24()
     public static void invoke$25()
+    public static void invoke$26()
 androidx.compose.ui.layout.SubcomposeLayoutState$setIntermediateMeasurePolicy$1
 androidx.compose.ui.layout.SubcomposeLayoutState$setMeasurePolicy$1
 androidx.compose.ui.layout.SubcomposeLayoutState$setRoot$1
@@ -27521,8 +27517,6 @@ androidx.compose.ui.modifier.ModifierLocalManager:
 androidx.compose.ui.modifier.ModifierLocalMap:
     static void <clinit>()
 androidx.compose.ui.modifier.ModifierLocalModifierNodeKt
-androidx.compose.ui.modifier.ModifierLocalReadScope:
-    public abstract java.lang.Object getCurrent(androidx.compose.ui.modifier.ProvidableModifierLocal)
 androidx.compose.ui.modifier.ProvidableModifierLocal:
     static void <clinit>()
 androidx.compose.ui.modifier.SingleLocalMap:
@@ -27561,13 +27555,11 @@ androidx.compose.ui.node.BackwardsCompatNode:
     public static void setElement()
     public static void updateDrawCache()
     public static void updateModifierLocalProvider()
-androidx.compose.ui.node.BackwardsCompatNodeKt$DetachedModifierLocalReadScope$1:
-    public final java.lang.Object getCurrent(androidx.compose.ui.modifier.ProvidableModifierLocal)
 androidx.compose.ui.node.BackwardsCompatNodeKt$onDrawCacheReadsChanged$1:
     public static final androidx.compose.ui.node.BackwardsCompatNodeKt$onDrawCacheReadsChanged$1 INSTANCE
     public final java.lang.Boolean invoke(java.lang.Object)
     public final void invoke(androidx.compose.ui.node.BackwardsCompatNode)
-    public static void invoke$26()
+    public static void invoke$27()
 androidx.compose.ui.node.BackwardsCompatNodeKt$updateModifierLocalConsumer$1
 androidx.compose.ui.node.BackwardsCompatNodeKt:
     public static final androidx.compose.ui.node.BackwardsCompatNodeKt$onDrawCacheReadsChanged$1 onDrawCacheReadsChanged
@@ -27580,13 +27572,13 @@ androidx.compose.ui.node.CanFocusChecker:
     public static void reset()
 androidx.compose.ui.node.CenteredArray
 androidx.compose.ui.node.ComposeUiNode$Companion$SetCompositeKeyHash$1:
-    public static void invoke$27()
     public static void invoke$28()
     public static void invoke$29()
     public static void invoke$30()
     public static void invoke$31()
     public static void invoke$32()
     public static void invoke$33()
+    public static void invoke$34()
 androidx.compose.ui.node.ComposeUiNode$Companion$SetDensity$1
 androidx.compose.ui.node.ComposeUiNode$Companion$SetLayoutDirection$1
 androidx.compose.ui.node.ComposeUiNode$Companion$SetMeasurePolicy$1
@@ -27675,7 +27667,7 @@ androidx.compose.ui.node.LayerPositionalProperties:
     public static void copyFrom()
     public static void copyFrom$1()
     public static boolean hasSameValuesAs()
-androidx.compose.ui.node.LayoutModifierNodeCoordinator$$InternalSyntheticThrowCCEIfNotNull$230$51925e4728e9a87308d1043100ba3e515445f7e52b904a4a6009ad441cf85d86$0
+androidx.compose.ui.node.LayoutModifierNodeCoordinator$$InternalSyntheticThrowCCEIfNotNull$231$51925e4728e9a87308d1043100ba3e515445f7e52b904a4a6009ad441cf85d86$0
 androidx.compose.ui.node.LayoutModifierNodeCoordinator$Companion
 androidx.compose.ui.node.LayoutModifierNodeCoordinator$LookaheadDelegateForLayoutModifierNode
 androidx.compose.ui.node.LayoutModifierNodeCoordinator:
@@ -28000,7 +27992,7 @@ androidx.compose.ui.node.NodeCoordinator:
     public abstract androidx.compose.ui.node.NodeCoordinator getWrappedBy$ui_release()
     public abstract float getZIndex()
     public abstract boolean hasNode-H91voCI()
-    public abstract void invoke$34()
+    public abstract void invoke$35()
     public abstract boolean isPointerInBounds-k-4lQ0M()
     public abstract long offsetFromEdge-MK-Hz9U()
     public final void onLayoutModifierNodeChanged()
@@ -28187,9 +28179,9 @@ androidx.compose.ui.platform.AndroidComposeView$_inputModeManager$1:
     public static java.lang.Boolean invoke-iuPiT84()
 androidx.compose.ui.platform.AndroidComposeView$configurationChangeObserver$1:
     public final java.lang.Boolean invoke(java.lang.Object)
-    public final void invoke$2()
+    public final void invoke$10()
+    public final void invoke$3()
     public static java.lang.Boolean invoke$6()
-    public final void invoke$9()
 androidx.compose.ui.platform.AndroidComposeView$focusOwner$1
 androidx.compose.ui.platform.AndroidComposeView$keyInputModifier$1
 androidx.compose.ui.platform.AndroidComposeView$platformTextInputPluginRegistry$1
@@ -28426,8 +28418,8 @@ androidx.compose.ui.platform.AndroidViewsHandler:
 androidx.compose.ui.platform.CalculateMatrixToWindowApi21
 androidx.compose.ui.platform.ComposableSingletons$Wrapper_androidKt$lambda-1$1:
     public final void invoke(androidx.compose.runtime.Composer,int)
-    public static void invoke$35()
     public static void invoke$36()
+    public static void invoke$37()
 androidx.compose.ui.platform.ComposableSingletons$Wrapper_androidKt:
     public static final androidx.compose.ui.platform.ComposableSingletons$Wrapper_androidKt INSTANCE
     public static kotlin.jvm.functions.Function2 getLambda-1$ui_release()
@@ -28796,7 +28788,7 @@ androidx.compose.ui.semantics.SemanticsModifierKt:
 androidx.compose.ui.semantics.SemanticsNode$emitFakeNodes$fakeNode$1
 androidx.compose.ui.semantics.SemanticsNode$emitFakeNodes$fakeNode$2:
     public final java.lang.String invoke$1()
-    public final void invoke$10()
+    public final void invoke$11()
 androidx.compose.ui.semantics.SemanticsNode$parent$1
 androidx.compose.ui.semantics.SemanticsNode$parent$2
 androidx.compose.ui.semantics.SemanticsNode:
@@ -29763,7 +29755,7 @@ androidx.compose.ui.text.input.TextFieldValue$Companion$Saver$1:
     public static java.lang.Object invoke$31()
 androidx.compose.ui.text.input.TextFieldValue$Companion$Saver$2:
     public static androidx.compose.ui.text.input.TextFieldValue invoke()
-    public static void invoke$37()
+    public static void invoke$38()
     public static void invoke-KlQnJC8()
 androidx.compose.ui.text.input.TextFieldValue$Companion
 androidx.compose.ui.text.input.TextFieldValue:
@@ -29848,6 +29840,7 @@ androidx.compose.ui.text.platform.AndroidTextPaint_androidKt:
     public static void checkArgumentNonnegative(int,java.lang.String)
     public static void checkState(java.lang.String,boolean)
     public static final androidx.savedstate.SavedStateRegistryOwner get(android.view.View)
+    public static java.util.Map mapOf(kotlin.Pair)
     public abstract void onFontRetrievalFailed()
     public abstract void onFontRetrieved()
     public static final void resetAt(java.lang.Object[],int)
@@ -29889,7 +29882,7 @@ androidx.compose.ui.text.platform.extensions.PlaceholderExtensions_androidKt:
     public static boolean copyToFile(java.io.File,java.io.InputStream)
     public static final float correctBlurRadius(float)
     public static java.util.List emptyList()
-    public static final java.util.Set emptySet()
+    public static java.util.Set emptySet()
     public static kotlin.SynchronizedLazyImpl lazy(kotlin.jvm.functions.Function0)
     public static final float lerp(float,float,float)
     public static varargs float maxOf(float,float[])
@@ -30046,7 +30039,7 @@ androidx.compose.ui.text.style.TextForegroundStyle:
     static void <clinit>()
     public abstract androidx.compose.ui.text.style.TextForegroundStyle merge()
     public androidx.compose.ui.text.style.TextForegroundStyle takeOrElse(kotlin.jvm.functions.Function0)
-androidx.compose.ui.text.style.TextGeometricTransform$Companion$$InternalSyntheticThrowCCEIfNotNull$257$eb521284a8d52406f74c42c87675389eba8ba5e32f3c8326749737267124c40e$0
+androidx.compose.ui.text.style.TextGeometricTransform$Companion$$InternalSyntheticThrowCCEIfNotNull$258$eb521284a8d52406f74c42c87675389eba8ba5e32f3c8326749737267124c40e$0
 androidx.compose.ui.text.style.TextGeometricTransform$Companion:
     public synthetic void <init>(int,int)
     public static android.graphics.Typeface buildTypeface()
@@ -31001,18 +30994,29 @@ androidx.versionedparcelable.VersionedParcelParcel:
     public final void writeInt(int)
     public final void writeParcelable()
     public final void writeString(java.lang.String)
+com.example.wifidirectwalkietalkie.AudioStreamer$PeerConnection$startPingJob$1:
+    public final java.lang.Object invoke$2()
+com.example.wifidirectwalkietalkie.AudioStreamer$PeerConnection$startReceivingAudio$1$1:
+    public int label
+    public final java.lang.Object invoke$2()
+com.example.wifidirectwalkietalkie.AudioStreamer$PeerConnection$startReceivingAudio$1:
+    public final java.lang.Object invoke$2()
+com.example.wifidirectwalkietalkie.AudioStreamer$PeerConnection:
+    public static java.io.InputStream getInputStream()
+    public static java.io.OutputStream getOutputStream()
+    public static com.example.wifidirectwalkietalkie.AudioStreamer$SignalQuality getQuality()
+    public static boolean isReceiving()
+    public static void setQuality()
+    public static void setReceiving()
+    public static void startPingJob()
+    public static void startReceivingAudio()
+com.example.wifidirectwalkietalkie.AudioStreamer$SignalQuality:
+    public static final synthetic kotlin.enums.EnumEntries $ENTRIES
 com.example.wifidirectwalkietalkie.AudioStreamer$startClient$1:
     public int label
     public final java.lang.Object invoke$2()
-com.example.wifidirectwalkietalkie.AudioStreamer$startReceivingAudio$1$1:
-    public int label
-    public final java.lang.Object invoke$2()
-com.example.wifidirectwalkietalkie.AudioStreamer$startReceivingAudio$1:
-    public final java.lang.Object invoke$2()
-com.example.wifidirectwalkietalkie.AudioStreamer$startRecording$1$1:
-    public int label
-    public final java.lang.Object invoke$2()
 com.example.wifidirectwalkietalkie.AudioStreamer$startRecording$1:
+    public int label
     public final java.lang.Object invoke$2()
 com.example.wifidirectwalkietalkie.AudioStreamer$startServer$1:
     public int label
@@ -31020,41 +31024,49 @@ com.example.wifidirectwalkietalkie.AudioStreamer$startServer$1:
 com.example.wifidirectwalkietalkie.AudioStreamer:
     public static final int $stable
     static void <clinit>()
+    public static void broadcastAudio()
+    public static void enqueueAudio()
+    public static void flushAudioBuffer()
+    public static kotlinx.coroutines.flow.StateFlow getSignalQuality()
+    public static void initAudioTrack()
     public static kotlinx.coroutines.flow.StateFlow isReceiving()
-    public static void setupStreams()
     public static void startClient()
     public static void startRecording()
     public static void startServer()
+    public static void stopRecording()
+    public static void updateGlobalState()
 com.example.wifidirectwalkietalkie.ComposableSingletons$MainActivityKt$lambda-1$1:
     public final void invoke(androidx.compose.runtime.Composer,int)
 com.example.wifidirectwalkietalkie.ComposableSingletons$MainActivityKt$lambda-2$1:
-    public final void invoke$38()
+    public final void invoke$39()
 com.example.wifidirectwalkietalkie.ComposableSingletons$MainActivityKt:
     public static final com.example.wifidirectwalkietalkie.ComposableSingletons$MainActivityKt INSTANCE
     public static kotlin.jvm.functions.Function2 getLambda-1$app_release()
     public static kotlin.jvm.functions.Function3 getLambda-2$app_release()
 com.example.wifidirectwalkietalkie.MainActivity$PeerListItem$1
-com.example.wifidirectwalkietalkie.MainActivity$PeerListItem$2$$InternalSyntheticThrowCCEIfNotNull$11$901e8084188ed1fad678c3d00aeaba1584d750931703e6401337adea77727898$0
-com.example.wifidirectwalkietalkie.MainActivity$PeerListItem$2$$InternalSyntheticThrowCCEIfNotNull$11$e741cb4aa04ad98fc59c13f5d2d98332a7ee71c6dc88e6de1a9eaa21bcf66f75$0
-com.example.wifidirectwalkietalkie.MainActivity$PeerListItem$2:
-    public final kotlin.jvm.functions.Function1 invoke(java.lang.Object,java.lang.Object)
-    public final void invoke$38()
-    public static void invoke$39()
-com.example.wifidirectwalkietalkie.MainActivity$PeerListItem$3
-com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$1
-com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$2:
+com.example.wifidirectwalkietalkie.MainActivity$PeerListItem$2
+com.example.wifidirectwalkietalkie.MainActivity$PeerListItem$3:
+    public final void invoke(androidx.compose.runtime.Composer,int)
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$2
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$3:
     public final void invoke()
-com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$3
-com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$4
-com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$6$1$1
-com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$6$invoke$$inlined$items$default$1:
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$4$$InternalSyntheticThrowCCEIfNotNull$11$0b242286dc8ba96c19c84c434df9d8e71dbbeced6d1635d48fc8b8314f1683f9$0
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$4$$InternalSyntheticThrowCCEIfNotNull$11$9acc147095db954be990053b24405091ddbf77d62d06ad986a2f08baff02c7a5$0
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$4:
+    public final synthetic int $r8$classId
+    public final kotlin.jvm.functions.Function1 invoke(java.lang.Object,java.lang.Object)
+    public final void invoke$39()
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$5
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$7$1$1
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$7$invoke$$inlined$items$default$1:
     public static java.lang.Void invoke()
-com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$6$invoke$$inlined$items$default$3
-com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$6$invoke$$inlined$items$default$4:
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$7$invoke$$inlined$items$default$3
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$7$invoke$$inlined$items$default$4:
     public static void invoke$40()
-com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$6
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$1$7
+com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1$WhenMappings
 com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$1:
-    public static final void access$invoke$lambda$4$lambda$2(androidx.compose.runtime.MutableState,boolean)
+    public static final void access$invoke$lambda$5$lambda$3(androidx.compose.runtime.MutableState,boolean)
     public final void invoke(androidx.compose.runtime.Composer,int)
 com.example.wifidirectwalkietalkie.MainActivity$WalkieTalkieApp$2
 com.example.wifidirectwalkietalkie.MainActivity$onCreate$1
@@ -31063,12 +31075,14 @@ com.example.wifidirectwalkietalkie.MainActivity$requestPermissionLauncher$1:
 com.example.wifidirectwalkietalkie.MainActivity:
     public static final int $stable
     static void <clinit>()
-    public static final boolean access$WalkieTalkieApp$lambda$2(androidx.compose.runtime.State)
+    public static final boolean access$WalkieTalkieApp$lambda$3(androidx.compose.runtime.State)
     public static void checkPermissionsAndDiscover()
     public final void startWalkieTalkieService()
 com.example.wifidirectwalkietalkie.R$raw
 com.example.wifidirectwalkietalkie.WalkieTalkieService$LocalBinder:
     public static com.example.wifidirectwalkietalkie.WalkieTalkieService getService()
+com.example.wifidirectwalkietalkie.WalkieTalkieService$onCreate$2$1$emit$2:
+    public final java.lang.Object invoke$2()
 com.example.wifidirectwalkietalkie.WalkieTalkieService$onCreate$2$1
 com.example.wifidirectwalkietalkie.WalkieTalkieService$onCreate$2:
     public final java.lang.Object invoke$2()
@@ -31079,6 +31093,7 @@ com.example.wifidirectwalkietalkie.WalkieTalkieService:
     public android.content.IntentFilter intentFilter
     static void <clinit>()
     public static void acquireWakeLock()
+    public static kotlinx.coroutines.flow.StateFlow getActualConnectionState()
     public final android.net.wifi.p2p.WifiP2pManager$Channel getChannel()
     public final android.net.wifi.p2p.WifiP2pManager getWifiP2pManager()
     public static void releaseWakeLock()
@@ -31095,19 +31110,22 @@ com.example.wifidirectwalkietalkie.WiFiDirectBroadcastReceiver:
 com.example.wifidirectwalkietalkie.WifiDirectManager$connect$1:
     public final synthetic int $r8$classId
 com.example.wifidirectwalkietalkie.WifiDirectManager$discoverPeers$1
+com.example.wifidirectwalkietalkie.WifiDirectManager$discoverPeers$2$onSuccess$1
 com.example.wifidirectwalkietalkie.WifiDirectManager:
     public static final int $stable
     public final android.content.Context context
     static void <clinit>()
-    public static void connect()
     public final void disconnect()
-    public final void discoverPeers()
+    public static kotlinx.coroutines.flow.StateFlow getAppPeers()
     public static kotlinx.coroutines.flow.StateFlow getConnectionInfo()
+    public static android.net.wifi.p2p.WifiP2pDevice getLastConnectedDevice()
     public static kotlinx.coroutines.flow.StateFlow getPeers()
     public static kotlinx.coroutines.flow.StateFlow isConnected()
+    public static boolean isUserInitiatedDisconnect()
     public static void requestConnectionInfo()
     public static void requestPeers()
     public static void setWifiP2pState()
+    public static void setupServiceDiscovery()
 com.google.common.util.concurrent.ListenableFuture
 kotlin.ExceptionsKt
 kotlin.ExceptionsKt__ExceptionsKt
@@ -31649,7 +31667,7 @@ kotlinx.coroutines.CoroutineExceptionHandler:
     static void <clinit>()
 kotlinx.coroutines.CoroutineExceptionHandlerKt
 kotlinx.coroutines.CoroutineId$$InternalSyntheticThrowCCEIfNotNull$18$f32d3c65e79275cc0e34133ff17172a91084ea4fa58ff765934c26285df444a4$0
-kotlinx.coroutines.CoroutineId$$InternalSyntheticThrowCCEIfNotNull$274$a04cd55831796dad4a4038d4eb866607cad4d88ce7c01ff729936a1ef385fb02$0
+kotlinx.coroutines.CoroutineId$$InternalSyntheticThrowCCEIfNotNull$275$a04cd55831796dad4a4038d4eb866607cad4d88ce7c01ff729936a1ef385fb02$0
 kotlinx.coroutines.CoroutineId
 kotlinx.coroutines.CoroutineName$Key
 kotlinx.coroutines.CoroutineName:
@@ -32233,8 +32251,8 @@ kotlinx.coroutines.internal.StackTraceRecoveryKt:
 kotlinx.coroutines.internal.Symbol
 kotlinx.coroutines.internal.SystemPropsKt
 kotlinx.coroutines.internal.SystemPropsKt__SystemProps_commonKt
-kotlinx.coroutines.internal.ThreadContextKt$countAll$1$$InternalSyntheticThrowCCEIfNotNull$274$a546074a2ed249d1eabefdc79e18209b1ee65e7faf56680f7461c253f28dd8e6$0
-kotlinx.coroutines.internal.ThreadContextKt$countAll$1$$InternalSyntheticThrowCCEIfNotNull$274$a546074a2ed249d1eabefdc79e18209b1ee65e7faf56680f7461c253f28dd8e6$2
+kotlinx.coroutines.internal.ThreadContextKt$countAll$1$$InternalSyntheticThrowCCEIfNotNull$275$a546074a2ed249d1eabefdc79e18209b1ee65e7faf56680f7461c253f28dd8e6$0
+kotlinx.coroutines.internal.ThreadContextKt$countAll$1$$InternalSyntheticThrowCCEIfNotNull$275$a546074a2ed249d1eabefdc79e18209b1ee65e7faf56680f7461c253f28dd8e6$2
 kotlinx.coroutines.internal.ThreadContextKt$countAll$1:
     public static kotlinx.coroutines.internal.ThreadState invoke()
     public static java.lang.Object invoke$38()

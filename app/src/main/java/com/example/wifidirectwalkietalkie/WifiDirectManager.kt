@@ -11,6 +11,8 @@ import android.os.Looper
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import android.net.wifi.p2p.nsd.WifiP2pDnsSdServiceInfo
+import android.net.wifi.p2p.nsd.WifiP2pDnsSdServiceRequest
 
 class WifiDirectManager(
     private val context: Context,
@@ -26,6 +28,9 @@ class WifiDirectManager(
     private val _isConnected = MutableStateFlow(false)
     val isConnected: StateFlow<Boolean> = _isConnected.asStateFlow()
 
+    private val _appPeers = MutableStateFlow<Set<String>>(emptySet())
+    val appPeers: StateFlow<Set<String>> = _appPeers.asStateFlow()
+
     var lastConnectedDevice: WifiP2pDevice? = null
         private set
     var isUserInitiatedDisconnect = false
@@ -36,6 +41,29 @@ class WifiDirectManager(
         if (refreshedPeers != _peers.value) {
             _peers.value = refreshedPeers
         }
+    }
+
+    init {
+        setupServiceDiscovery()
+    }
+
+    private fun setupServiceDiscovery() {
+        val record = mapOf("app" to "walkietalkie")
+        val serviceInfo = WifiP2pDnsSdServiceInfo.newInstance("_walkietalkie", "_presence._tcp", record)
+        manager.addLocalService(channel, serviceInfo, null)
+
+        manager.setDnsSdResponseListeners(channel,
+            { instanceName, registrationType, srcDevice ->
+                if (instanceName == "_walkietalkie") {
+                    _appPeers.value = _appPeers.value + srcDevice.deviceAddress
+                }
+            },
+            { fullDomainName, recordMap, srcDevice ->
+                if (recordMap["app"] == "walkietalkie") {
+                    _appPeers.value = _appPeers.value + srcDevice.deviceAddress
+                }
+            }
+        )
     }
 
     private val connectionInfoListener = WifiP2pManager.ConnectionInfoListener { info ->
@@ -53,6 +81,20 @@ class WifiDirectManager(
             override fun onFailure(reasonCode: Int) {
                 // Discovery failed
             }
+        })
+        
+        // Also start service discovery to find devices running this app
+        val serviceRequest = WifiP2pDnsSdServiceRequest.newInstance()
+        manager.clearServiceRequests(channel, object : WifiP2pManager.ActionListener {
+            override fun onSuccess() {
+                manager.addServiceRequest(channel, serviceRequest, object : WifiP2pManager.ActionListener {
+                    override fun onSuccess() {
+                        manager.discoverServices(channel, null)
+                    }
+                    override fun onFailure(reason: Int) {}
+                })
+            }
+            override fun onFailure(reason: Int) {}
         })
     }
 
@@ -108,6 +150,7 @@ class WifiDirectManager(
     fun setWifiP2pState(enabled: Boolean) {
         if (!enabled) {
             _peers.value = emptyList()
+            _appPeers.value = emptySet()
             _isConnected.value = false
         }
     }

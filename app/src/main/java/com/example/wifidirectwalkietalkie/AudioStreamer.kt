@@ -24,6 +24,7 @@ import java.net.InetAddress
 import java.net.ServerSocket
 import java.net.Socket
 import java.util.concurrent.ConcurrentLinkedQueue
+import java.util.concurrent.CopyOnWriteArrayList
 
 class AudioStreamer(private val context: Context, private val coroutineScope: CoroutineScope) {
     private val sampleRate = 16000
@@ -33,11 +34,10 @@ class AudioStreamer(private val context: Context, private val coroutineScope: Co
     private val bufferSize = AudioRecord.getMinBufferSize(sampleRate, channelConfigRecord, audioFormat)
 
     private var serverSocket: ServerSocket? = null
-    private var socket: Socket? = null
-    private var inputStream: InputStream? = null
-    private var outputStream: OutputStream? = null
+    
+    // Active connections (can be multiple if this device is Group Owner)
+    private val activeConnections = CopyOnWriteArrayList<PeerConnection>()
 
-    private var receiveJob: Job? = null
     private var sendJob: Job? = null
     private var isRecording = false
 
@@ -55,14 +55,193 @@ class AudioStreamer(private val context: Context, private val coroutineScope: Co
     private var currentBufferSize = 0
     private val maxBufferSizeBytes = 16000 * 2 * 2 // ~2 seconds of 16-bit mono 16kHz audio
 
-    private var pingJob: Job? = null
+    // Update global state based on all active connections
+    private fun updateGlobalState() {
+        if (activeConnections.isEmpty()) {
+            _isReceiving.value = false
+            _signalQuality.value = SignalQuality.DISCONNECTED
+            return
+        }
+        
+        var anyReceiving = false
+        var bestQuality = SignalQuality.DISCONNECTED
+        
+        for (conn in activeConnections) {
+            if (conn.isReceiving) anyReceiving = true
+            
+            val q = conn.quality
+            if (q == SignalQuality.EXCELLENT) {
+                bestQuality = SignalQuality.EXCELLENT
+            } else if (q == SignalQuality.GOOD && bestQuality != SignalQuality.EXCELLENT) {
+                bestQuality = SignalQuality.GOOD
+            } else if (q == SignalQuality.POOR && bestQuality == SignalQuality.DISCONNECTED) {
+                bestQuality = SignalQuality.POOR
+            }
+        }
+        
+        _isReceiving.value = anyReceiving
+        _signalQuality.value = bestQuality
+    }
+
+    inner class PeerConnection(val socket: Socket) {
+        var inputStream: InputStream? = null
+        var outputStream: OutputStream? = null
+        var receiveJob: Job? = null
+        var pingJob: Job? = null
+        var isReceiving = false
+        var quality = SignalQuality.DISCONNECTED
+
+        init {
+            try {
+                socket.soTimeout = 1000
+                inputStream = socket.getInputStream()
+                outputStream = socket.getOutputStream()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+
+        fun start() {
+            startPingJob(socket.inetAddress)
+            startReceivingAudio()
+            flushAudioBuffer(this)
+        }
+
+        private fun startPingJob(address: InetAddress) {
+            pingJob?.cancel()
+            pingJob = coroutineScope.launch(Dispatchers.IO) {
+                while (isActive) {
+                    try {
+                        val start = System.currentTimeMillis()
+                        val reachable = address.isReachable(1000)
+                        val latency = System.currentTimeMillis() - start
+                        
+                        if (reachable) {
+                            quality = when {
+                                latency < 100 -> SignalQuality.EXCELLENT
+                                latency < 300 -> SignalQuality.GOOD
+                                else -> SignalQuality.POOR
+                            }
+                        } else {
+                            quality = SignalQuality.POOR
+                        }
+                    } catch (e: Exception) {
+                        quality = SignalQuality.POOR
+                    }
+                    updateGlobalState()
+                    delay(1000)
+                }
+            }
+        }
+
+        private fun startReceivingAudio() {
+            receiveJob = coroutineScope.launch(Dispatchers.IO) {
+                val buffer = ByteArray(bufferSize)
+                var lastReceiveTime = 0L
+                try {
+                    while (isActive) {
+                        val readBytes = try {
+                            inputStream?.read(buffer) ?: -1
+                        } catch (e: java.net.SocketTimeoutException) {
+                            0
+                        }
+                        if (readBytes > 0) {
+                            isReceiving = true
+                            updateGlobalState()
+                            
+                            val currentTime = System.currentTimeMillis()
+                            if (currentTime - lastReceiveTime > 1000) {
+                                withContext(Dispatchers.Main) {
+                                    try {
+                                        val mediaPlayer = MediaPlayer.create(context, R.raw.roger_sound)
+                                        mediaPlayer.setOnCompletionListener { it.release() }
+                                        mediaPlayer.start()
+                                    } catch (e: Exception) {
+                                        e.printStackTrace()
+                                    }
+                                }
+                            }
+                            lastReceiveTime = System.currentTimeMillis()
+                            
+                            val chunk = buffer.copyOf(readBytes)
+                            // Play locally
+                            audioTrack?.write(chunk, 0, chunk.size)
+                            // Forward to other clients (Mesh Routing)
+                            broadcastAudio(chunk, this@PeerConnection)
+                            
+                        } else if (readBytes == 0) {
+                            if (System.currentTimeMillis() - lastReceiveTime >= 1000) {
+                                isReceiving = false
+                                updateGlobalState()
+                            }
+                        } else {
+                            isReceiving = false
+                            updateGlobalState()
+                            // Connection lost
+                            break
+                        }
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    isReceiving = false
+                    updateGlobalState()
+                } finally {
+                    disconnect()
+                }
+            }
+        }
+
+        fun disconnect() {
+            receiveJob?.cancel()
+            pingJob?.cancel()
+            try {
+                inputStream?.close()
+                outputStream?.close()
+                socket.close()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+            activeConnections.remove(this)
+            updateGlobalState()
+        }
+    }
+
+    private fun initAudioTrack() {
+        if (audioTrack == null) {
+            audioTrack = AudioTrack.Builder()
+                .setAudioAttributes(
+                    AudioAttributes.Builder()
+                        .setUsage(AudioAttributes.USAGE_MEDIA)
+                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                        .build()
+                )
+                .setAudioFormat(
+                    AudioFormat.Builder()
+                        .setEncoding(audioFormat)
+                        .setSampleRate(sampleRate)
+                        .setChannelMask(channelConfigPlay)
+                        .build()
+                )
+                .setBufferSizeInBytes(bufferSize)
+                .setTransferMode(AudioTrack.MODE_STREAM)
+                .build()
+        }
+        if (audioTrack?.playState != AudioTrack.PLAYSTATE_PLAYING) {
+            audioTrack?.play()
+        }
+    }
 
     fun startServer() {
         coroutineScope.launch(Dispatchers.IO) {
             try {
                 serverSocket = ServerSocket(8888)
-                socket = serverSocket?.accept()
-                setupStreams(socket)
+                while (isActive) {
+                    val socket = serverSocket?.accept() ?: break
+                    initAudioTrack()
+                    val connection = PeerConnection(socket)
+                    activeConnections.add(connection)
+                    connection.start()
+                }
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -72,114 +251,13 @@ class AudioStreamer(private val context: Context, private val coroutineScope: Co
     fun startClient(hostAddress: InetAddress) {
         coroutineScope.launch(Dispatchers.IO) {
             try {
-                socket = Socket(hostAddress, 8888)
-                setupStreams(socket)
+                val socket = Socket(hostAddress, 8888)
+                initAudioTrack()
+                val connection = PeerConnection(socket)
+                activeConnections.add(connection)
+                connection.start()
             } catch (e: Exception) {
                 e.printStackTrace()
-            }
-        }
-    }
-
-    private fun setupStreams(socket: Socket?) {
-        if (socket == null) return
-        try {
-            socket.soTimeout = 1000 // 1 second timeout to detect end of transmission
-            inputStream = socket.getInputStream()
-            outputStream = socket.getOutputStream()
-            startReceivingAudio()
-            startPingJob(socket.inetAddress)
-            flushAudioBuffer()
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
-    }
-
-    private fun startPingJob(address: InetAddress) {
-        pingJob?.cancel()
-        pingJob = coroutineScope.launch(Dispatchers.IO) {
-            while (isActive) {
-                try {
-                    val start = System.currentTimeMillis()
-                    val reachable = address.isReachable(1000)
-                    val latency = System.currentTimeMillis() - start
-                    
-                    if (reachable) {
-                        _signalQuality.value = when {
-                            latency < 100 -> SignalQuality.EXCELLENT
-                            latency < 300 -> SignalQuality.GOOD
-                            else -> SignalQuality.POOR
-                        }
-                    } else {
-                        _signalQuality.value = SignalQuality.POOR
-                    }
-                } catch (e: Exception) {
-                    _signalQuality.value = SignalQuality.POOR
-                }
-                delay(1000)
-            }
-        }
-    }
-
-    private fun startReceivingAudio() {
-        audioTrack = AudioTrack.Builder()
-            .setAudioAttributes(
-                AudioAttributes.Builder()
-                    .setUsage(AudioAttributes.USAGE_MEDIA)
-                    .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                    .build()
-            )
-            .setAudioFormat(
-                AudioFormat.Builder()
-                    .setEncoding(audioFormat)
-                    .setSampleRate(sampleRate)
-                    .setChannelMask(channelConfigPlay)
-                    .build()
-            )
-            .setBufferSizeInBytes(bufferSize)
-            .setTransferMode(AudioTrack.MODE_STREAM)
-            .build()
-
-        audioTrack?.play()
-
-        receiveJob = coroutineScope.launch(Dispatchers.IO) {
-            val buffer = ByteArray(bufferSize)
-            var lastReceiveTime = 0L
-            try {
-                while (isActive) {
-                    val readBytes = try {
-                        inputStream?.read(buffer) ?: -1
-                    } catch (e: java.net.SocketTimeoutException) {
-                        0
-                    }
-                    if (readBytes > 0) {
-                        _isReceiving.value = true
-                        val currentTime = System.currentTimeMillis()
-                        // If it's been more than 1 second since the last audio chunk, 
-                        // treat it as a new transmission and play the roger sound.
-                        if (currentTime - lastReceiveTime > 1000) {
-                            withContext(Dispatchers.Main) {
-                                try {
-                                    val mediaPlayer = MediaPlayer.create(context, R.raw.roger_sound)
-                                    mediaPlayer.setOnCompletionListener { it.release() }
-                                    mediaPlayer.start()
-                                } catch (e: Exception) {
-                                    e.printStackTrace()
-                                }
-                            }
-                        }
-                        audioTrack?.write(buffer, 0, readBytes)
-                        lastReceiveTime = System.currentTimeMillis()
-                    } else if (readBytes == 0) {
-                        if (System.currentTimeMillis() - lastReceiveTime >= 1000) {
-                            _isReceiving.value = false
-                        }
-                    } else {
-                        _isReceiving.value = false
-                    }
-                }
-            } catch (e: Exception) {
-                e.printStackTrace()
-                _isReceiving.value = false
             }
         }
     }
@@ -209,23 +287,32 @@ class AudioStreamer(private val context: Context, private val coroutineScope: Co
                     val readBytes = audioRecord?.read(buffer, 0, buffer.size) ?: -1
                     if (readBytes > 0) {
                         val chunk = buffer.copyOf(readBytes)
-                        if (outputStream != null) {
-                            try {
-                                flushAudioBuffer()
-                                outputStream?.write(chunk)
-                                outputStream?.flush()
-                            } catch (e: Exception) {
-                                // Socket broken, buffer it
-                                outputStream = null
-                                enqueueAudio(chunk)
-                            }
-                        } else {
-                            enqueueAudio(chunk)
-                        }
+                        broadcastAudio(chunk, null)
                     }
                 }
             } catch (e: Exception) {
                 e.printStackTrace()
+            }
+        }
+    }
+
+    private fun broadcastAudio(chunk: ByteArray, sender: PeerConnection?) {
+        if (activeConnections.isEmpty()) {
+            if (sender == null) { // Local recording, no connections
+                enqueueAudio(chunk)
+            }
+            return
+        }
+
+        for (conn in activeConnections) {
+            if (conn != sender) {
+                try {
+                    // Send to this connection
+                    conn.outputStream?.write(chunk)
+                    conn.outputStream?.flush()
+                } catch (e: Exception) {
+                    // Socket broken, disconnect will be handled in receive loop
+                }
             }
         }
     }
@@ -239,11 +326,15 @@ class AudioStreamer(private val context: Context, private val coroutineScope: Co
         }
     }
 
-    private fun flushAudioBuffer() {
+    private fun flushAudioBuffer(connection: PeerConnection) {
         while (audioBuffer.isNotEmpty()) {
             val chunk = audioBuffer.poll()
             if (chunk != null) {
-                outputStream?.write(chunk)
+                try {
+                    connection.outputStream?.write(chunk)
+                } catch (e: Exception) {
+                    // Ignore, let receive loop handle it
+                }
                 currentBufferSize -= chunk.size
             }
         }
@@ -263,11 +354,13 @@ class AudioStreamer(private val context: Context, private val coroutineScope: Co
     }
 
     fun disconnect() {
-        receiveJob?.cancel()
-        sendJob?.cancel()
-        pingJob?.cancel()
         isRecording = false
         _signalQuality.value = SignalQuality.DISCONNECTED
+        _isReceiving.value = false
+        
+        sendJob?.cancel()
+        sendJob = null
+
         try {
             audioRecord?.stop()
             audioRecord?.release()
@@ -286,17 +379,17 @@ class AudioStreamer(private val context: Context, private val coroutineScope: Co
         }
         audioTrack = null
 
+        val connectionsToClose = activeConnections.toList()
+        for (conn in connectionsToClose) {
+            conn.disconnect()
+        }
+        activeConnections.clear()
+
         try {
-            inputStream?.close()
-            outputStream?.close()
-            socket?.close()
             serverSocket?.close()
         } catch (e: Exception) {
             e.printStackTrace()
         }
-        socket = null
         serverSocket = null
-        inputStream = null
-        outputStream = null
     }
 }

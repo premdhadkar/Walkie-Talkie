@@ -145,6 +145,7 @@ class MainActivity : ComponentActivity() {
     @Composable
     fun WalkieTalkieApp(service: WalkieTalkieService) {
         val peers by service.wifiDirectManager.peers.collectAsState()
+        val appPeers by service.wifiDirectManager.appPeers.collectAsState()
         val isConnected by service.actualConnectionState.collectAsState()
         val isReceiving by service.audioStreamer.isReceiving.collectAsState()
         val signalQuality by service.audioStreamer.signalQuality.collectAsState()
@@ -241,7 +242,7 @@ class MainActivity : ComponentActivity() {
 
                     LazyColumn(modifier = Modifier.weight(1f)) {
                         items(peers) { peer ->
-                            PeerListItem(peer) {
+                            PeerListItem(peer, appPeers.contains(peer.deviceAddress)) {
                                 service.wifiDirectManager.connect(it)
                             }
                         }
@@ -253,7 +254,7 @@ class MainActivity : ComponentActivity() {
 
     @SuppressLint("MissingPermission")
     @Composable
-    fun PeerListItem(peer: WifiP2pDevice, onConnect: (WifiP2pDevice) -> Unit) {
+    fun PeerListItem(peer: WifiP2pDevice, isAppUser: Boolean, onConnect: (WifiP2pDevice) -> Unit) {
         Card(
             border = androidx.compose.foundation.BorderStroke(1.dp, Color.White),
             modifier = Modifier
@@ -262,7 +263,25 @@ class MainActivity : ComponentActivity() {
                 .clickable { onConnect(peer) }
         ) {
             Column(modifier = Modifier.padding(16.dp)) {
-                Text(text = peer.deviceName, style = MaterialTheme.typography.bodyLarge)
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Text(text = peer.deviceName, style = MaterialTheme.typography.bodyLarge)
+                    if (isAppUser) {
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = "(Walkie-Talkie)", 
+                            style = MaterialTheme.typography.bodySmall, 
+                            color = Color.Green
+                        )
+                    }
+                    if (peer.isGroupOwner) {
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = "(Hub)", 
+                            style = MaterialTheme.typography.bodySmall, 
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                }
                 Text(text = peer.deviceAddress, style = MaterialTheme.typography.bodySmall)
             }
         }
